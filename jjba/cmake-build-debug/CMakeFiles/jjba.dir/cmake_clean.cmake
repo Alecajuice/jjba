@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "jjba.pdb"
   "jjba.exe"
   "jjba.exe.manifest"
-  "jjba.lib"
+  "libjjba.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

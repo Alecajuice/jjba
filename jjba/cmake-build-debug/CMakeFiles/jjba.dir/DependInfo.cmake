@@ -6,10 +6,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/aleca/git/jjba/jjba/main.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "MSVC")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "C:/MinGW/include/SDL2"
   )
 
 # Targets to which this target links.
