@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/gameName.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/gameName.h">
+			<Option target="jjba"/>
+		</Unit>
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/main.cpp">
 			<Option target="jjba"/>
 		</Unit>

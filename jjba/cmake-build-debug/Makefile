@@ -122,6 +122,33 @@ jjba/fast:
 	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/build
 .PHONY : jjba/fast
 
+gameName.obj: gameName.cpp.obj
+
+.PHONY : gameName.obj
+
+# target to build an object file
+gameName.cpp.obj:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/gameName.cpp.obj
+.PHONY : gameName.cpp.obj
+
+gameName.i: gameName.cpp.i
+
+.PHONY : gameName.i
+
+# target to preprocess a source file
+gameName.cpp.i:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/gameName.cpp.i
+.PHONY : gameName.cpp.i
+
+gameName.s: gameName.cpp.s
+
+.PHONY : gameName.s
+
+# target to generate assembly for a file
+gameName.cpp.s:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/gameName.cpp.s
+.PHONY : gameName.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... jjba
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... gameName.obj
+	@echo ... gameName.i
+	@echo ... gameName.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

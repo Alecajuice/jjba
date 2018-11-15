@@ -8,6 +8,6 @@ find_package(SDL2 REQUIRED)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(jjba main.cpp)
+add_executable(jjba main.cpp gameName.cpp gameName.h)
 include_directories(${SDL2_INCLUDE_DIR})
 target_link_libraries(jjba ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -mwindows)
