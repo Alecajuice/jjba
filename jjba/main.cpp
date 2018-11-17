@@ -16,30 +16,26 @@ bool loadMedia();
 void close();
 
 //The window we'll be rendering to
-SDL_Window* gWindow = NULL;
+SDL_Window *gWindow = NULL;
 
 //The surface contained by the window
-SDL_Surface* gScreenSurface = NULL;
+SDL_Surface *gScreenSurface = NULL;
 
 //The image we will load and show on the screen
-SDL_Surface* gHelloWorld = NULL;
+SDL_Surface *gHelloWorld = NULL;
 
-int main(int argc, char* args[])
-{
+int main(int argc, char *args[]) {
+    //Turn off stdout buffering for debugging
+    setbuf(stdout, NULL);
+
     //Start up SDL and create window
-    if(!init())
-    {
+    if (!init()) {
         printf("Failed to initialize!\n");
-    }
-    else
-    {
+    } else {
         //Load media
-        if(!loadMedia())
-        {
+        if (!loadMedia()) {
             printf("Failed to load media!\n");
-        }
-        else
-        {
+        } else {
             //Main loop flag
             bool quit = false;
 
@@ -47,14 +43,11 @@ int main(int argc, char* args[])
             SDL_Event e;
 
             //Main loop
-            while(!quit)
-            {
+            while (!quit) {
                 //Handle events on queue
-                while(SDL_PollEvent(&e) != 0)
-                {
+                while (SDL_PollEvent(&e) != 0) {
                     //User requests quit
-                    if(e.type == SDL_QUIT)
-                    {
+                    if (e.type == SDL_QUIT) {
                         quit = true;
                     }
                 }
@@ -73,33 +66,26 @@ int main(int argc, char* args[])
     return 0;
 }
 
-bool init()
-{
+bool init() {
     //Init success flag
     bool success = true;
 
     //Initialize SDL
-    if(SDL_Init(SDL_INIT_VIDEO) < 0)
-    {
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
         success = false;
-    }
-    else
-    {
-
+    } else {
         //Create window with random name
-        char* gameName = chooseGameName();
+        char *gameName = chooseGameName();
         printf(gameName);
-        gWindow = SDL_CreateWindow(gameName, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-        //delete gameName;
+        gWindow = SDL_CreateWindow(gameName, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
+                                   SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+        delete gameName;
 
-        if(gWindow == NULL)
-        {
+        if (gWindow == NULL) {
             printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
             success = false;
-        }
-        else
-        {
+        } else {
             //Get window surface
             gScreenSurface = SDL_GetWindowSurface(gWindow);
         }
@@ -108,24 +94,22 @@ bool init()
     return success;
 }
 
-bool loadMedia()
-{
+bool loadMedia() {
     //Loading success flag
     bool success = true;
 
     //Load splash image
     gHelloWorld = SDL_LoadBMP("assets/img/hello_world.bmp");
-    if( gHelloWorld == NULL )
-    {
-        printf("Unable to load image %s! SDL Error: %s\n", "02_getting_an_image_on_the_screen/hello_world.bmp", SDL_GetError());
+    if (gHelloWorld == NULL) {
+        printf("Unable to load image %s! SDL Error: %s\n", "02_getting_an_image_on_the_screen/hello_world.bmp",
+               SDL_GetError());
         success = false;
     }
 
     return success;
 }
 
-void close()
-{
+void close() {
     //Deallocate surface
     SDL_FreeSurface(gHelloWorld);
     gHelloWorld = NULL;

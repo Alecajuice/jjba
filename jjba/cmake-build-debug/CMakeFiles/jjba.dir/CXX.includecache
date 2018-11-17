@@ -6,11 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/aleca/git/jjba/jjba/gameName.cpp
-fstream
+C:/Users/aleca/git/jjba/jjba/gameName.h
+
+C:/Users/aleca/git/jjba/jjba/main.cpp
+SDL2/SDL.h
 -
-ctime
+stdio.h
 -
-string.h
--
+gameName.h
+C:/Users/aleca/git/jjba/jjba/gameName.h
 
