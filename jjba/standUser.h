@@ -8,8 +8,13 @@
 #include "stand.h"
 
 class StandUser : public Character {
+private:
+//    Stand mStand;
 public:
-    Stand mStand;
+    //Constructor
+    StandUser();
+
+    explicit StandUser(Hitbox mHitbox);
 };
 
 #endif //JJBA_STANDUSER_H

@@ -3,3 +3,9 @@
 //
 
 #include "character.h"
+
+Character::Character() {
+
+}
+
+Character::Character(Hitbox &mHitbox) : Object(mHitbox){}

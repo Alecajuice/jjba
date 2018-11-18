@@ -12,10 +12,22 @@ class Object {
 private:
     Hitbox mHitbox;
     SDL_Point mVelocity;
-
     Spritesheet mSprites;
 public:
-    void loadMedia();
+    Object();
+
+    explicit Object(const Hitbox &mHitbox);
+
+    virtual void loadMedia(SDL_Renderer* renderer) = 0;
+
+    const Hitbox &getMHitbox() const;
+
+    void setMHitbox(const Hitbox &mHitbox);
+
+    Spritesheet &getMSprites();
+
+    void setMSprites(const Spritesheet &mSprites);
+
 };
 
 #endif //JJBA_OBJECT_H

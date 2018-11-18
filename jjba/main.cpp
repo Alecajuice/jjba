@@ -1,9 +1,11 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
+#include <SDL_image.h>
 
 #include "gameName.h"
 
 #include "hitbox.h"
+#include "game.h"
 
 const int SCREEN_WIDTH = 1280;
 const int SCREEN_HEIGHT = 720;
@@ -18,17 +20,20 @@ bool loadMedia();
 void close();
 
 //The window we'll be rendering to
-SDL_Window *gWindow = NULL;
+SDL_Window *gWindow = nullptr;
+
+//Renderer
+SDL_Renderer *gRenderer = nullptr;
 
 //The surface contained by the window
-SDL_Surface *gScreenSurface = NULL;
+SDL_Surface *gScreenSurface = nullptr;
 
 //The image we will load and show on the screen
-SDL_Surface *gHelloWorld = NULL;
+SDL_Surface *gHelloWorld = nullptr;
 
 int main(int argc, char *args[]) {
     //Turn off stdout buffering for debugging
-    setbuf(stdout, NULL);
+    setbuf(stdout, nullptr);
 
     //Start up SDL and create window
     if (!init()) {
@@ -38,6 +43,9 @@ int main(int argc, char *args[]) {
         if (!loadMedia()) {
             printf("Failed to load media!\n");
         } else {
+            //Create game
+            Game *game = new Game(gRenderer);
+
             //Main loop flag
             bool quit = false;
 
@@ -53,11 +61,20 @@ int main(int argc, char *args[]) {
                         quit = true;
                     }
                 }
-                //Apply the image
-                SDL_BlitSurface(gHelloWorld, NULL, gScreenSurface, NULL);
+                //Clear screen
+                SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+                SDL_RenderClear(gRenderer);
 
-                //Update the surface
-                SDL_UpdateWindowSurface(gWindow);
+                //Render
+                game->render(gRenderer);
+
+                //Update screen
+                SDL_RenderPresent(gRenderer);
+//                //Apply the image
+//                SDL_BlitSurface(gHelloWorld, nullptr, gScreenSurface, nullptr);
+//
+//                //Update the surface
+//                SDL_UpdateWindowSurface(gWindow);
             }
         }
     }
@@ -84,10 +101,26 @@ bool init() {
                                    SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
         delete gameName;
 
-        if (gWindow == NULL) {
+        if (gWindow == nullptr) {
             printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
             success = false;
         } else {
+            //Create renderer for window
+            gRenderer = SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
+            if (gRenderer == NULL) {
+                printf("Renderer could not be created! SDL Error: %s\n", SDL_GetError());
+                success = false;
+            } else {
+                //Initialize renderer color
+                SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+
+                //Initialize PNG loading
+                int imgFlags = IMG_INIT_PNG;
+                if (!(IMG_Init(imgFlags) & imgFlags)) {
+                    printf("SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
+                    success = false;
+                }
+            }
             //Get window surface
             gScreenSurface = SDL_GetWindowSurface(gWindow);
         }
@@ -102,7 +135,7 @@ bool loadMedia() {
 
     //Load splash image
     gHelloWorld = SDL_LoadBMP("assets/img/hello_world.bmp");
-    if (gHelloWorld == NULL) {
+    if (gHelloWorld == nullptr) {
         printf("Unable to load image %s! SDL Error: %s\n", "02_getting_an_image_on_the_screen/hello_world.bmp",
                SDL_GetError());
         success = false;
@@ -114,13 +147,15 @@ bool loadMedia() {
 void close() {
     //Deallocate surface
     SDL_FreeSurface(gHelloWorld);
-    gHelloWorld = NULL;
+    gHelloWorld = nullptr;
 
     //Destroy window
+    SDL_DestroyRenderer(gRenderer);
     SDL_DestroyWindow(gWindow);
-    gWindow = NULL;
+    gWindow = nullptr;
 
     //Quit SDL subsystems
+    IMG_Quit();
     SDL_Quit();
 }
 

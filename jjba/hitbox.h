@@ -6,7 +6,6 @@
 #define JJBA_HITBOX_H
 
 #include <SDL_rect.h>
-#include "geometry.h"
 
 class Hitbox {
 private:

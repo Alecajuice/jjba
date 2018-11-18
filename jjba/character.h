@@ -8,8 +8,10 @@
 #include "object.h"
 
 class Character : public Object {
-private:
-
+public:
+    //Constructor
+    Character();
+    Character(Hitbox &mHitbox);
 };
 
 #endif //JJBA_CHARACTER_H

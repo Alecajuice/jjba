@@ -8,7 +8,12 @@
 #include "standUser.h"
 
 class Jotaro : public StandUser {
+public:
+    Jotaro();
 
+    void loadMedia(SDL_Renderer* renderer);
+
+    void render(SDL_Renderer* renderer);
 };
 
 #endif //JJBA_JOTARO_H

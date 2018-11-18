@@ -3,3 +3,9 @@
 //
 
 #include "standUser.h"
+
+StandUser::StandUser() {
+
+}
+
+StandUser::StandUser(Hitbox mHitbox) : Character(mHitbox){}

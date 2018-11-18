@@ -1,0 +1,13 @@
+{
+  "IDLE": {
+    "length": 24,
+    "fps": 15,
+    "variable_width": false,
+    "frame": {
+      "x": 0,
+      "y": 0,
+      "width": 76,
+      "height": 130
+    }
+  }
+}
