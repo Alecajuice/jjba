@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/aleca/git/jjba/jjba/game.cpp
+
 C:/Users/aleca/git/jjba/jjba/gameName.h
+
+C:/Users/aleca/git/jjba/jjba/geometry.cpp
+geometry.h
+C:/Users/aleca/git/jjba/jjba/geometry.h
+
+C:/Users/aleca/git/jjba/jjba/geometry.h
+
+C:/Users/aleca/git/jjba/jjba/hitbox.cpp
+hitbox.h
+C:/Users/aleca/git/jjba/jjba/hitbox.h
+
+C:/Users/aleca/git/jjba/jjba/hitbox.h
+geometry.h
+C:/Users/aleca/git/jjba/jjba/geometry.h
 
 C:/Users/aleca/git/jjba/jjba/main.cpp
 SDL2/SDL.h
@@ -15,4 +31,14 @@ stdio.h
 -
 gameName.h
 C:/Users/aleca/git/jjba/jjba/gameName.h
+hitbox.h
+C:/Users/aleca/git/jjba/jjba/hitbox.h
+
+C:/Users/aleca/git/jjba/jjba/object.cpp
+object.h
+C:/Users/aleca/git/jjba/jjba/object.h
+
+C:/Users/aleca/git/jjba/jjba/object.h
+hitbox.h
+C:/Users/aleca/git/jjba/jjba/hitbox.h
 

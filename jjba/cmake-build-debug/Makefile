@@ -122,6 +122,60 @@ jjba/fast:
 	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/build
 .PHONY : jjba/fast
 
+character.obj: character.cpp.obj
+
+.PHONY : character.obj
+
+# target to build an object file
+character.cpp.obj:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/character.cpp.obj
+.PHONY : character.cpp.obj
+
+character.i: character.cpp.i
+
+.PHONY : character.i
+
+# target to preprocess a source file
+character.cpp.i:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/character.cpp.i
+.PHONY : character.cpp.i
+
+character.s: character.cpp.s
+
+.PHONY : character.s
+
+# target to generate assembly for a file
+character.cpp.s:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/character.cpp.s
+.PHONY : character.cpp.s
+
+game.obj: game.cpp.obj
+
+.PHONY : game.obj
+
+# target to build an object file
+game.cpp.obj:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/game.cpp.obj
+.PHONY : game.cpp.obj
+
+game.i: game.cpp.i
+
+.PHONY : game.i
+
+# target to preprocess a source file
+game.cpp.i:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/game.cpp.i
+.PHONY : game.cpp.i
+
+game.s: game.cpp.s
+
+.PHONY : game.s
+
+# target to generate assembly for a file
+game.cpp.s:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/game.cpp.s
+.PHONY : game.cpp.s
+
 gameName.obj: gameName.cpp.obj
 
 .PHONY : gameName.obj
@@ -148,6 +202,60 @@ gameName.s: gameName.cpp.s
 gameName.cpp.s:
 	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/gameName.cpp.s
 .PHONY : gameName.cpp.s
+
+hitbox.obj: hitbox.cpp.obj
+
+.PHONY : hitbox.obj
+
+# target to build an object file
+hitbox.cpp.obj:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/hitbox.cpp.obj
+.PHONY : hitbox.cpp.obj
+
+hitbox.i: hitbox.cpp.i
+
+.PHONY : hitbox.i
+
+# target to preprocess a source file
+hitbox.cpp.i:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/hitbox.cpp.i
+.PHONY : hitbox.cpp.i
+
+hitbox.s: hitbox.cpp.s
+
+.PHONY : hitbox.s
+
+# target to generate assembly for a file
+hitbox.cpp.s:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/hitbox.cpp.s
+.PHONY : hitbox.cpp.s
+
+jotaro.obj: jotaro.cpp.obj
+
+.PHONY : jotaro.obj
+
+# target to build an object file
+jotaro.cpp.obj:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/jotaro.cpp.obj
+.PHONY : jotaro.cpp.obj
+
+jotaro.i: jotaro.cpp.i
+
+.PHONY : jotaro.i
+
+# target to preprocess a source file
+jotaro.cpp.i:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/jotaro.cpp.i
+.PHONY : jotaro.cpp.i
+
+jotaro.s: jotaro.cpp.s
+
+.PHONY : jotaro.s
+
+# target to generate assembly for a file
+jotaro.cpp.s:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/jotaro.cpp.s
+.PHONY : jotaro.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -176,6 +284,114 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+object.obj: object.cpp.obj
+
+.PHONY : object.obj
+
+# target to build an object file
+object.cpp.obj:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/object.cpp.obj
+.PHONY : object.cpp.obj
+
+object.i: object.cpp.i
+
+.PHONY : object.i
+
+# target to preprocess a source file
+object.cpp.i:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/object.cpp.i
+.PHONY : object.cpp.i
+
+object.s: object.cpp.s
+
+.PHONY : object.s
+
+# target to generate assembly for a file
+object.cpp.s:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/object.cpp.s
+.PHONY : object.cpp.s
+
+spritesheet.obj: spritesheet.cpp.obj
+
+.PHONY : spritesheet.obj
+
+# target to build an object file
+spritesheet.cpp.obj:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/spritesheet.cpp.obj
+.PHONY : spritesheet.cpp.obj
+
+spritesheet.i: spritesheet.cpp.i
+
+.PHONY : spritesheet.i
+
+# target to preprocess a source file
+spritesheet.cpp.i:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/spritesheet.cpp.i
+.PHONY : spritesheet.cpp.i
+
+spritesheet.s: spritesheet.cpp.s
+
+.PHONY : spritesheet.s
+
+# target to generate assembly for a file
+spritesheet.cpp.s:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/spritesheet.cpp.s
+.PHONY : spritesheet.cpp.s
+
+stand.obj: stand.cpp.obj
+
+.PHONY : stand.obj
+
+# target to build an object file
+stand.cpp.obj:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/stand.cpp.obj
+.PHONY : stand.cpp.obj
+
+stand.i: stand.cpp.i
+
+.PHONY : stand.i
+
+# target to preprocess a source file
+stand.cpp.i:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/stand.cpp.i
+.PHONY : stand.cpp.i
+
+stand.s: stand.cpp.s
+
+.PHONY : stand.s
+
+# target to generate assembly for a file
+stand.cpp.s:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/stand.cpp.s
+.PHONY : stand.cpp.s
+
+standUser.obj: standUser.cpp.obj
+
+.PHONY : standUser.obj
+
+# target to build an object file
+standUser.cpp.obj:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/standUser.cpp.obj
+.PHONY : standUser.cpp.obj
+
+standUser.i: standUser.cpp.i
+
+.PHONY : standUser.i
+
+# target to preprocess a source file
+standUser.cpp.i:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/standUser.cpp.i
+.PHONY : standUser.cpp.i
+
+standUser.s: standUser.cpp.s
+
+.PHONY : standUser.s
+
+# target to generate assembly for a file
+standUser.cpp.s:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/standUser.cpp.s
+.PHONY : standUser.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +401,36 @@ help:
 	@echo ... jjba
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... character.obj
+	@echo ... character.i
+	@echo ... character.s
+	@echo ... game.obj
+	@echo ... game.i
+	@echo ... game.s
 	@echo ... gameName.obj
 	@echo ... gameName.i
 	@echo ... gameName.s
+	@echo ... hitbox.obj
+	@echo ... hitbox.i
+	@echo ... hitbox.s
+	@echo ... jotaro.obj
+	@echo ... jotaro.i
+	@echo ... jotaro.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... object.obj
+	@echo ... object.i
+	@echo ... object.s
+	@echo ... spritesheet.obj
+	@echo ... spritesheet.i
+	@echo ... spritesheet.s
+	@echo ... stand.obj
+	@echo ... stand.i
+	@echo ... stand.s
+	@echo ... standUser.obj
+	@echo ... standUser.i
+	@echo ... standUser.s
 .PHONY : help
 
 

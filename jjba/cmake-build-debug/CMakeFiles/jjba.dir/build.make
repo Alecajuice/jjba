@@ -84,23 +84,151 @@ CMakeFiles/jjba.dir/gameName.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jjba.dir/gameName.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aleca\git\jjba\jjba\gameName.cpp -o CMakeFiles\jjba.dir\gameName.cpp.s
 
+CMakeFiles/jjba.dir/game.cpp.obj: CMakeFiles/jjba.dir/flags.make
+CMakeFiles/jjba.dir/game.cpp.obj: CMakeFiles/jjba.dir/includes_CXX.rsp
+CMakeFiles/jjba.dir/game.cpp.obj: ../game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aleca\git\jjba\jjba\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/jjba.dir/game.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\jjba.dir\game.cpp.obj -c C:\Users\aleca\git\jjba\jjba\game.cpp
+
+CMakeFiles/jjba.dir/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jjba.dir/game.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aleca\git\jjba\jjba\game.cpp > CMakeFiles\jjba.dir\game.cpp.i
+
+CMakeFiles/jjba.dir/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jjba.dir/game.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aleca\git\jjba\jjba\game.cpp -o CMakeFiles\jjba.dir\game.cpp.s
+
+CMakeFiles/jjba.dir/object.cpp.obj: CMakeFiles/jjba.dir/flags.make
+CMakeFiles/jjba.dir/object.cpp.obj: CMakeFiles/jjba.dir/includes_CXX.rsp
+CMakeFiles/jjba.dir/object.cpp.obj: ../object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aleca\git\jjba\jjba\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/jjba.dir/object.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\jjba.dir\object.cpp.obj -c C:\Users\aleca\git\jjba\jjba\object.cpp
+
+CMakeFiles/jjba.dir/object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jjba.dir/object.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aleca\git\jjba\jjba\object.cpp > CMakeFiles\jjba.dir\object.cpp.i
+
+CMakeFiles/jjba.dir/object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jjba.dir/object.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aleca\git\jjba\jjba\object.cpp -o CMakeFiles\jjba.dir\object.cpp.s
+
+CMakeFiles/jjba.dir/hitbox.cpp.obj: CMakeFiles/jjba.dir/flags.make
+CMakeFiles/jjba.dir/hitbox.cpp.obj: CMakeFiles/jjba.dir/includes_CXX.rsp
+CMakeFiles/jjba.dir/hitbox.cpp.obj: ../hitbox.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aleca\git\jjba\jjba\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/jjba.dir/hitbox.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\jjba.dir\hitbox.cpp.obj -c C:\Users\aleca\git\jjba\jjba\hitbox.cpp
+
+CMakeFiles/jjba.dir/hitbox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jjba.dir/hitbox.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aleca\git\jjba\jjba\hitbox.cpp > CMakeFiles\jjba.dir\hitbox.cpp.i
+
+CMakeFiles/jjba.dir/hitbox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jjba.dir/hitbox.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aleca\git\jjba\jjba\hitbox.cpp -o CMakeFiles\jjba.dir\hitbox.cpp.s
+
+CMakeFiles/jjba.dir/character.cpp.obj: CMakeFiles/jjba.dir/flags.make
+CMakeFiles/jjba.dir/character.cpp.obj: CMakeFiles/jjba.dir/includes_CXX.rsp
+CMakeFiles/jjba.dir/character.cpp.obj: ../character.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aleca\git\jjba\jjba\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/jjba.dir/character.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\jjba.dir\character.cpp.obj -c C:\Users\aleca\git\jjba\jjba\character.cpp
+
+CMakeFiles/jjba.dir/character.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jjba.dir/character.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aleca\git\jjba\jjba\character.cpp > CMakeFiles\jjba.dir\character.cpp.i
+
+CMakeFiles/jjba.dir/character.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jjba.dir/character.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aleca\git\jjba\jjba\character.cpp -o CMakeFiles\jjba.dir\character.cpp.s
+
+CMakeFiles/jjba.dir/standUser.cpp.obj: CMakeFiles/jjba.dir/flags.make
+CMakeFiles/jjba.dir/standUser.cpp.obj: CMakeFiles/jjba.dir/includes_CXX.rsp
+CMakeFiles/jjba.dir/standUser.cpp.obj: ../standUser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aleca\git\jjba\jjba\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/jjba.dir/standUser.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\jjba.dir\standUser.cpp.obj -c C:\Users\aleca\git\jjba\jjba\standUser.cpp
+
+CMakeFiles/jjba.dir/standUser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jjba.dir/standUser.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aleca\git\jjba\jjba\standUser.cpp > CMakeFiles\jjba.dir\standUser.cpp.i
+
+CMakeFiles/jjba.dir/standUser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jjba.dir/standUser.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aleca\git\jjba\jjba\standUser.cpp -o CMakeFiles\jjba.dir\standUser.cpp.s
+
+CMakeFiles/jjba.dir/stand.cpp.obj: CMakeFiles/jjba.dir/flags.make
+CMakeFiles/jjba.dir/stand.cpp.obj: CMakeFiles/jjba.dir/includes_CXX.rsp
+CMakeFiles/jjba.dir/stand.cpp.obj: ../stand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aleca\git\jjba\jjba\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/jjba.dir/stand.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\jjba.dir\stand.cpp.obj -c C:\Users\aleca\git\jjba\jjba\stand.cpp
+
+CMakeFiles/jjba.dir/stand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jjba.dir/stand.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aleca\git\jjba\jjba\stand.cpp > CMakeFiles\jjba.dir\stand.cpp.i
+
+CMakeFiles/jjba.dir/stand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jjba.dir/stand.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aleca\git\jjba\jjba\stand.cpp -o CMakeFiles\jjba.dir\stand.cpp.s
+
+CMakeFiles/jjba.dir/jotaro.cpp.obj: CMakeFiles/jjba.dir/flags.make
+CMakeFiles/jjba.dir/jotaro.cpp.obj: CMakeFiles/jjba.dir/includes_CXX.rsp
+CMakeFiles/jjba.dir/jotaro.cpp.obj: ../jotaro.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aleca\git\jjba\jjba\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/jjba.dir/jotaro.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\jjba.dir\jotaro.cpp.obj -c C:\Users\aleca\git\jjba\jjba\jotaro.cpp
+
+CMakeFiles/jjba.dir/jotaro.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jjba.dir/jotaro.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aleca\git\jjba\jjba\jotaro.cpp > CMakeFiles\jjba.dir\jotaro.cpp.i
+
+CMakeFiles/jjba.dir/jotaro.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jjba.dir/jotaro.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aleca\git\jjba\jjba\jotaro.cpp -o CMakeFiles\jjba.dir\jotaro.cpp.s
+
+CMakeFiles/jjba.dir/spritesheet.cpp.obj: CMakeFiles/jjba.dir/flags.make
+CMakeFiles/jjba.dir/spritesheet.cpp.obj: CMakeFiles/jjba.dir/includes_CXX.rsp
+CMakeFiles/jjba.dir/spritesheet.cpp.obj: ../spritesheet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\aleca\git\jjba\jjba\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/jjba.dir/spritesheet.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\jjba.dir\spritesheet.cpp.obj -c C:\Users\aleca\git\jjba\jjba\spritesheet.cpp
+
+CMakeFiles/jjba.dir/spritesheet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jjba.dir/spritesheet.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\aleca\git\jjba\jjba\spritesheet.cpp > CMakeFiles\jjba.dir\spritesheet.cpp.i
+
+CMakeFiles/jjba.dir/spritesheet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jjba.dir/spritesheet.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\aleca\git\jjba\jjba\spritesheet.cpp -o CMakeFiles\jjba.dir\spritesheet.cpp.s
+
 # Object files for target jjba
 jjba_OBJECTS = \
 "CMakeFiles/jjba.dir/main.cpp.obj" \
-"CMakeFiles/jjba.dir/gameName.cpp.obj"
+"CMakeFiles/jjba.dir/gameName.cpp.obj" \
+"CMakeFiles/jjba.dir/game.cpp.obj" \
+"CMakeFiles/jjba.dir/object.cpp.obj" \
+"CMakeFiles/jjba.dir/hitbox.cpp.obj" \
+"CMakeFiles/jjba.dir/character.cpp.obj" \
+"CMakeFiles/jjba.dir/standUser.cpp.obj" \
+"CMakeFiles/jjba.dir/stand.cpp.obj" \
+"CMakeFiles/jjba.dir/jotaro.cpp.obj" \
+"CMakeFiles/jjba.dir/spritesheet.cpp.obj"
 
 # External object files for target jjba
 jjba_EXTERNAL_OBJECTS =
 
 jjba.exe: CMakeFiles/jjba.dir/main.cpp.obj
 jjba.exe: CMakeFiles/jjba.dir/gameName.cpp.obj
+jjba.exe: CMakeFiles/jjba.dir/game.cpp.obj
+jjba.exe: CMakeFiles/jjba.dir/object.cpp.obj
+jjba.exe: CMakeFiles/jjba.dir/hitbox.cpp.obj
+jjba.exe: CMakeFiles/jjba.dir/character.cpp.obj
+jjba.exe: CMakeFiles/jjba.dir/standUser.cpp.obj
+jjba.exe: CMakeFiles/jjba.dir/stand.cpp.obj
+jjba.exe: CMakeFiles/jjba.dir/jotaro.cpp.obj
+jjba.exe: CMakeFiles/jjba.dir/spritesheet.cpp.obj
 jjba.exe: CMakeFiles/jjba.dir/build.make
 jjba.exe: C:/MinGW/lib/libSDL2main.a
 jjba.exe: C:/MinGW/lib/libSDL2.dll.a
 jjba.exe: CMakeFiles/jjba.dir/linklibs.rsp
 jjba.exe: CMakeFiles/jjba.dir/objects1.rsp
 jjba.exe: CMakeFiles/jjba.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\aleca\git\jjba\jjba\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable jjba.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\aleca\git\jjba\jjba\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable jjba.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\jjba.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

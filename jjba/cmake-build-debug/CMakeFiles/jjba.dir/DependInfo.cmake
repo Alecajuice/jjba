@@ -4,8 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/aleca/git/jjba/jjba/character.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/character.cpp.obj"
+  "C:/Users/aleca/git/jjba/jjba/game.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/game.cpp.obj"
   "C:/Users/aleca/git/jjba/jjba/gameName.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/gameName.cpp.obj"
+  "C:/Users/aleca/git/jjba/jjba/hitbox.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/hitbox.cpp.obj"
+  "C:/Users/aleca/git/jjba/jjba/jotaro.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/jotaro.cpp.obj"
   "C:/Users/aleca/git/jjba/jjba/main.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/main.cpp.obj"
+  "C:/Users/aleca/git/jjba/jjba/object.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/object.cpp.obj"
+  "C:/Users/aleca/git/jjba/jjba/spritesheet.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/spritesheet.cpp.obj"
+  "C:/Users/aleca/git/jjba/jjba/stand.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/stand.cpp.obj"
+  "C:/Users/aleca/git/jjba/jjba/standUser.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/standUser.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

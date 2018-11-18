@@ -84,13 +84,61 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/character.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/character.h">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/game.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/game.h">
+			<Option target="jjba"/>
+		</Unit>
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/gameName.cpp">
 			<Option target="jjba"/>
 		</Unit>
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/gameName.h">
 			<Option target="jjba"/>
 		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/hitbox.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/hitbox.h">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/jotaro.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/jotaro.h">
+			<Option target="jjba"/>
+		</Unit>
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/main.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/object.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/object.h">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/spritesheet.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/spritesheet.h">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/stand.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/stand.h">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/standUser.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/standUser.h">
 			<Option target="jjba"/>
 		</Unit>
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/CMakeLists.txt">
