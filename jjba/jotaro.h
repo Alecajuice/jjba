@@ -9,11 +9,15 @@
 
 class Jotaro : public StandUser {
 public:
+    //Constructor
     Jotaro();
 
-    void loadMedia(SDL_Renderer* renderer);
+    //Member functions
+    void loadMedia(SDL_Renderer* renderer) override;
+    void render(SDL_Renderer* renderer) override;
 
-    void render(SDL_Renderer* renderer);
+    const int getMoveSpeed() const override;
+    const int getStandMoveSpeed() const override;
 };
 
 #endif //JJBA_JOTARO_H

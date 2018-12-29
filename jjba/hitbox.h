@@ -7,23 +7,59 @@
 
 #include <SDL_rect.h>
 
+struct Vector {
+    double x, y;
+};
+
 class Hitbox {
 private:
-    SDL_Rect mBounds;
-public:
-    //Constructor
-    Hitbox(const SDL_Rect &bounds);
+    Vector position;
+    Vector size;
 
-    Hitbox(int x, int y, int width, int height);
+public:
+    //Constructors
+    explicit Hitbox(const SDL_Rect &bounds);
+
+    Hitbox(double x, double y, double width, double height);
+
+    Hitbox(Vector position, Vector size);
+
+    //Member functions
+    Hitbox translate(double x, double y);
+    Hitbox translate(Vector v);
 
     //Getters and setters
-    const SDL_Rect &getBounds() const;
+    const SDL_Rect getSDL_Rect() const;
 
-    void setPosition(int x, int y);
+    const Vector &getPosition() const;
+
+    void setPosition(double x, double y);
+
+    void setPosition(Vector position);
+
+    const Vector &getSize() const;
 
     void setBounds(const SDL_Rect &bounds);
 
-    void setBounds(int x, int y, int width, int height);
+    void setBounds(double x, double y, double width, double height);
+
+    void setBounds(Vector position, Vector size);
+
+    double getX() const;
+
+    void setX(double x);
+
+    double getY() const;
+
+    void setY(double y);
+
+    double getW() const;
+
+    void setW(double w);
+
+    double getH() const;
+
+    void setH(double h);
 };
 
 #endif //JJBA_HITBOX_H

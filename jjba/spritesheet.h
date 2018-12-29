@@ -12,28 +12,30 @@
 
 class Spritesheet {
 private:
-    SDL_Texture* mTexture = nullptr;
+    SDL_Texture *mTexture = nullptr;
     nlohmann::json mFrames = nullptr;
 
     int mWidth;
     int mHeight;
 
-    Uint32 animationStartTime;
-public:
-    void setAnimationStartTime(Uint32 startTime);
-
 public:
     //Constructors
     Spritesheet();
-    explicit Spritesheet(SDL_Renderer* renderer, std::string path);
 
-    //Load texture from file
-    bool loadFromFile(SDL_Renderer* renderer, std::string path);
+    explicit Spritesheet(SDL_Renderer *renderer, std::string path, Uint8 keyR, Uint8 keyG, Uint8 keyB);
 
-    //Render
-    void render(SDL_Renderer* renderer, SDL_Rect bounds, SDL_Rect* clip = nullptr);
-    void render(SDL_Renderer* renderer, int x, int y, int width, int height, SDL_Rect* clip = nullptr);
-    void render(SDL_Renderer* renderer, SDL_Rect bounds, std::string animationName);
+    //Member functions
+    bool loadFromFile(SDL_Renderer *renderer, std::string path, Uint8 keyR, Uint8 keyG, Uint8 keyB);
+
+    void render(SDL_Renderer *renderer, SDL_Rect bounds, SDL_RendererFlip flipType, SDL_Rect *clip = nullptr);
+
+    void render(SDL_Renderer *renderer, int x, int y, int width, int height, SDL_RendererFlip flipType,
+            SDL_Rect *clip = nullptr);
+
+    void render(SDL_Renderer *renderer, SDL_Rect hitbox, std::string animationName, Uint32 startTime,
+                SDL_RendererFlip flipType, int fps = -1);
+
+    bool animationDone(std::string animationName, Uint32 startTime, int fps = -1);
 
     //Free texture
     void free();

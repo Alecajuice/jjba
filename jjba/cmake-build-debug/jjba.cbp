@@ -90,6 +90,9 @@
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/character.h">
 			<Option target="jjba"/>
 		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/constants.h">
+			<Option target="jjba"/>
+		</Unit>
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/game.cpp">
 			<Option target="jjba"/>
 		</Unit>
@@ -127,12 +130,6 @@
 			<Option target="jjba"/>
 		</Unit>
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/spritesheet.h">
-			<Option target="jjba"/>
-		</Unit>
-		<Unit filename="C:/Users/aleca/git/jjba/jjba/stand.cpp">
-			<Option target="jjba"/>
-		</Unit>
-		<Unit filename="C:/Users/aleca/git/jjba/jjba/stand.h">
 			<Option target="jjba"/>
 		</Unit>
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/standUser.cpp">

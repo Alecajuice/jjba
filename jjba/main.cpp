@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
 #include <SDL_image.h>
+#include <afxres.h>
 
 #include "gameName.h"
 
@@ -31,6 +32,9 @@ SDL_Surface *gScreenSurface = nullptr;
 //The image we will load and show on the screen
 SDL_Surface *gHelloWorld = nullptr;
 
+//Game Controller 1 handler
+SDL_GameController *gGameController = nullptr;
+
 int main(int argc, char *args[]) {
     //Turn off stdout buffering for debugging
     setbuf(stdout, nullptr);
@@ -49,18 +53,25 @@ int main(int argc, char *args[]) {
             //Main loop flag
             bool quit = false;
 
-            //Event handler
-            SDL_Event e;
+            //Timestep variables
+//            double t = 0.0;
+            const double dt = 1000 / 60.0; //60 fps
+            double currentTime = SDL_GetTicks();
 
             //Main loop
             while (!quit) {
-                //Handle events on queue
-                while (SDL_PollEvent(&e) != 0) {
-                    //User requests quit
-                    if (e.type == SDL_QUIT) {
-                        quit = true;
-                    }
+                //Update timestep
+                double newTime = SDL_GetTicks();
+                double frameTime = newTime - currentTime;
+                currentTime = newTime;
+
+                while (frameTime > 0.0) {
+                    const double deltaTime = std::min(frameTime, dt);
+                    quit = game->update(deltaTime, gGameController);
+                    frameTime -= deltaTime;
+//                    t += deltaTime;
                 }
+
                 //Clear screen
                 SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
                 SDL_RenderClear(gRenderer);
@@ -76,6 +87,8 @@ int main(int argc, char *args[]) {
 //                //Update the surface
 //                SDL_UpdateWindowSurface(gWindow);
             }
+
+            delete game;
         }
     }
 
@@ -90,13 +103,13 @@ bool init() {
     bool success = true;
 
     //Initialize SDL
-    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER) < 0) {
         printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
         success = false;
     } else {
         //Create window with random name
         char *gameName = chooseGameName();
-        printf(gameName);
+        printf("%s\n", gameName);
         gWindow = SDL_CreateWindow(gameName, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
                                    SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
         delete gameName;
@@ -120,6 +133,18 @@ bool init() {
                     printf("SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
                     success = false;
                 }
+                //Check for joysticks
+                if (SDL_NumJoysticks() < 2) {
+                    printf("Warning: No joysticks connected!\n");
+                } else {
+                    printf("Number of joysticks connected: %d\n", SDL_NumJoysticks());
+                    //Load joystick
+                    gGameController = SDL_GameControllerOpen(0);
+                    if (gGameController == nullptr) {
+                        printf("Warning: Unable to open game controller! SDL Error: %s\n", SDL_GetError());
+                    }
+                }
+
             }
             //Get window surface
             gScreenSurface = SDL_GetWindowSurface(gWindow);
@@ -153,6 +178,10 @@ void close() {
     SDL_DestroyRenderer(gRenderer);
     SDL_DestroyWindow(gWindow);
     gWindow = nullptr;
+
+    //Close game controller
+    SDL_GameControllerClose(gGameController);
+    gGameController = nullptr;
 
     //Quit SDL subsystems
     IMG_Quit();

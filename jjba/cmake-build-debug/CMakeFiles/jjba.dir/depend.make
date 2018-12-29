@@ -17,6 +17,7 @@ CMakeFiles/jjba.dir/character.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
 CMakeFiles/jjba.dir/character.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/jjba.dir/character.cpp.obj: ../character.cpp
 CMakeFiles/jjba.dir/character.cpp.obj: ../character.h
+CMakeFiles/jjba.dir/character.cpp.obj: ../constants.h
 CMakeFiles/jjba.dir/character.cpp.obj: ../hitbox.h
 CMakeFiles/jjba.dir/character.cpp.obj: ../object.h
 CMakeFiles/jjba.dir/character.cpp.obj: ../spritesheet.h
@@ -36,13 +37,13 @@ CMakeFiles/jjba.dir/game.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
 CMakeFiles/jjba.dir/game.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
 CMakeFiles/jjba.dir/game.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../character.h
+CMakeFiles/jjba.dir/game.cpp.obj: ../constants.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../game.cpp
 CMakeFiles/jjba.dir/game.cpp.obj: ../game.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../hitbox.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../jotaro.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../object.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../spritesheet.h
-CMakeFiles/jjba.dir/game.cpp.obj: ../stand.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../standUser.h
 
 CMakeFiles/jjba.dir/gameName.cpp.obj: ../gameName.cpp
@@ -75,12 +76,12 @@ CMakeFiles/jjba.dir/jotaro.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: ../character.h
+CMakeFiles/jjba.dir/jotaro.cpp.obj: ../constants.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: ../hitbox.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: ../jotaro.cpp
 CMakeFiles/jjba.dir/jotaro.cpp.obj: ../jotaro.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: ../object.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: ../spritesheet.h
-CMakeFiles/jjba.dir/jotaro.cpp.obj: ../stand.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: ../standUser.h
 
 CMakeFiles/jjba.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL.h
@@ -130,6 +131,7 @@ CMakeFiles/jjba.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
 CMakeFiles/jjba.dir/main.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
 CMakeFiles/jjba.dir/main.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../character.h
+CMakeFiles/jjba.dir/main.cpp.obj: ../constants.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../game.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../gameName.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../hitbox.h
@@ -137,7 +139,6 @@ CMakeFiles/jjba.dir/main.cpp.obj: ../jotaro.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/jjba.dir/main.cpp.obj: ../object.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../spritesheet.h
-CMakeFiles/jjba.dir/main.cpp.obj: ../stand.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../standUser.h
 
 CMakeFiles/jjba.dir/object.cpp.obj: C:/MinGW/include/SDL2/SDL_blendmode.h
@@ -176,27 +177,6 @@ CMakeFiles/jjba.dir/spritesheet.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/jjba.dir/spritesheet.cpp.obj: ../spritesheet.cpp
 CMakeFiles/jjba.dir/spritesheet.cpp.obj: ../spritesheet.h
 
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_blendmode.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_config.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_endian.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_error.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_pixels.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_platform.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_rect.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_render.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_rwops.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_stdinc.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_surface.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
-CMakeFiles/jjba.dir/stand.cpp.obj: C:/MinGW/include/SDL2/close_code.h
-CMakeFiles/jjba.dir/stand.cpp.obj: ../character.h
-CMakeFiles/jjba.dir/stand.cpp.obj: ../hitbox.h
-CMakeFiles/jjba.dir/stand.cpp.obj: ../object.h
-CMakeFiles/jjba.dir/stand.cpp.obj: ../spritesheet.h
-CMakeFiles/jjba.dir/stand.cpp.obj: ../stand.cpp
-CMakeFiles/jjba.dir/stand.cpp.obj: ../stand.h
-
 CMakeFiles/jjba.dir/standUser.cpp.obj: C:/MinGW/include/SDL2/SDL_blendmode.h
 CMakeFiles/jjba.dir/standUser.cpp.obj: C:/MinGW/include/SDL2/SDL_config.h
 CMakeFiles/jjba.dir/standUser.cpp.obj: C:/MinGW/include/SDL2/SDL_endian.h
@@ -212,10 +192,10 @@ CMakeFiles/jjba.dir/standUser.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
 CMakeFiles/jjba.dir/standUser.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
 CMakeFiles/jjba.dir/standUser.cpp.obj: C:/MinGW/include/SDL2/close_code.h
 CMakeFiles/jjba.dir/standUser.cpp.obj: ../character.h
+CMakeFiles/jjba.dir/standUser.cpp.obj: ../constants.h
 CMakeFiles/jjba.dir/standUser.cpp.obj: ../hitbox.h
 CMakeFiles/jjba.dir/standUser.cpp.obj: ../object.h
 CMakeFiles/jjba.dir/standUser.cpp.obj: ../spritesheet.h
-CMakeFiles/jjba.dir/standUser.cpp.obj: ../stand.h
 CMakeFiles/jjba.dir/standUser.cpp.obj: ../standUser.cpp
 CMakeFiles/jjba.dir/standUser.cpp.obj: ../standUser.h
 

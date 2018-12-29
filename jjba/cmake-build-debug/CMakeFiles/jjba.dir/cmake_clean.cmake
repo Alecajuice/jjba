@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/jjba.dir/hitbox.cpp.obj"
   "CMakeFiles/jjba.dir/character.cpp.obj"
   "CMakeFiles/jjba.dir/standUser.cpp.obj"
-  "CMakeFiles/jjba.dir/stand.cpp.obj"
   "CMakeFiles/jjba.dir/jotaro.cpp.obj"
   "CMakeFiles/jjba.dir/spritesheet.cpp.obj"
   "jjba.pdb"

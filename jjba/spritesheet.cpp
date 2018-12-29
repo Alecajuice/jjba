@@ -11,11 +11,11 @@ const int FPS_DEFAULT = 30;
 
 Spritesheet::Spritesheet() = default;
 
-Spritesheet::Spritesheet(SDL_Renderer *renderer, std::string path) {
-    loadFromFile(renderer, std::move(path));
+Spritesheet::Spritesheet(SDL_Renderer *renderer, std::string path, Uint8 keyR, Uint8 keyG, Uint8 keyB) {
+    loadFromFile(renderer, std::move(path), keyR, keyG, keyB);
 }
 
-bool Spritesheet::loadFromFile(SDL_Renderer *renderer, std::string path) {
+bool Spritesheet::loadFromFile(SDL_Renderer *renderer, std::string path, Uint8 keyR, Uint8 keyG, Uint8 keyB) {
     //Get rid of preexisting texture
     free();
 
@@ -27,8 +27,7 @@ bool Spritesheet::loadFromFile(SDL_Renderer *renderer, std::string path) {
     if (loadedSurface == nullptr) {
         printf("Unable to load image %s! SDL_image Error: %s\n", (path + ".png").c_str(), IMG_GetError());
     } else {
-        //Color key image to #8080ff
-        SDL_SetColorKey(loadedSurface, SDL_TRUE, SDL_MapRGB(loadedSurface->format, 0x80, 0x80, 0xFF));
+        SDL_SetColorKey(loadedSurface, SDL_TRUE, SDL_MapRGB(loadedSurface->format, keyR, keyG, keyB));
 
         //Create texture from surface pixels
         newTexture = SDL_CreateTextureFromSurface(renderer, loadedSurface);
@@ -56,36 +55,72 @@ bool Spritesheet::loadFromFile(SDL_Renderer *renderer, std::string path) {
     return mTexture != nullptr && mFrames != nullptr;
 }
 
-void Spritesheet::render(SDL_Renderer *renderer, SDL_Rect bounds, SDL_Rect *clip) {
+void Spritesheet::render(SDL_Renderer *renderer, SDL_Rect bounds, SDL_RendererFlip flipType, SDL_Rect *clip) {
     //Render to screen
-    SDL_RenderCopy(renderer, mTexture, clip, &bounds);
+    SDL_RenderCopyEx(renderer, mTexture, clip, &bounds, 0, nullptr, flipType);
 }
 
-void Spritesheet::render(SDL_Renderer *renderer, int x, int y, int width, int height, SDL_Rect *clip) {
-    render(renderer, {x, y, width, height}, clip);
+void Spritesheet::render(SDL_Renderer *renderer, int x, int y, int width, int height, SDL_RendererFlip flipType,
+                         SDL_Rect *clip) {
+    render(renderer, {x, y, width, height}, flipType, clip);
 }
 
-void Spritesheet::render(SDL_Renderer *renderer, SDL_Rect bounds, std::string animationName) {
-    nlohmann::json animation = (mFrames)[animationName];
-    int numFrames = (int)animation["length"];
-    int fps;
-    if(animation["fps"] != nullptr) {
-        fps = animation["fps"];
+nlohmann::json getFrameValue(nlohmann::json animation, int curFrame, std::string key) {
+    if (animation["frames"][curFrame][key] == nullptr) {
+        return animation["default"][key];
     } else {
-        fps = FPS_DEFAULT;
+        return animation["frames"][curFrame][key];
+    }
+}
+
+void Spritesheet::render(SDL_Renderer *renderer, SDL_Rect hitbox, std::string animationName, Uint32 startTime,
+                         SDL_RendererFlip flipType, int fps) {
+    //IDLE: hitbox width: 56, height: 110
+
+    //Store animation data in variable
+    nlohmann::json animation = (mFrames)[animationName];
+
+    //Calculate current frame from game time
+    int numFrames = (int) animation["length"];
+    int framesPerSecond;
+    if (fps != -1) {
+        framesPerSecond = fps;
+    } else if (animation["fps"] != nullptr) {
+        framesPerSecond = animation["fps"];
+    } else {
+        framesPerSecond = FPS_DEFAULT;
     }
     int curTime = SDL_GetTicks();
-    int curFrame = ((curTime - animationStartTime) * fps / 1000) % numFrames;
-    SDL_Rect clip;
-    if(animation["variable_width"]) {
-        nlohmann::json frame = animation[animationName]["frames"][curFrame];
-        clip = {frame["x"], frame["y"], frame["width"], frame["height"]};
+    int curFrame = ((curTime - startTime) * framesPerSecond / 1000) % numFrames;
+
+    //If animation sprites have static widths, calculate x from widths
+    int x;
+    if (animation["variable_width"]) {
+        x = getFrameValue(animation, curFrame, "x");
     } else {
-        nlohmann::json frame = animation["frame"];
-        clip = {(int)frame["x"] + curFrame * (int)frame["width"], frame["y"], frame["width"], frame["height"]};
+        int xVal = getFrameValue(animation, curFrame, "x");
+        int wVal = getFrameValue(animation, curFrame, "width");
+        x = xVal + curFrame * wVal;
     }
 
-    render(renderer, bounds, &clip);
+    //Construct clipping rectangle
+    int yVal = getFrameValue(animation, curFrame, "y");
+    int wVal = getFrameValue(animation, curFrame, "width");
+    int hVal = getFrameValue(animation, curFrame, "height");
+    SDL_Rect clip = {x, yVal, wVal, hVal};
+
+    //Construct bounds rectangle
+    int xOffsetVal = getFrameValue(animation, curFrame, "x-offset");
+    int yOffsetVal = getFrameValue(animation, curFrame, "y-offset");
+    SDL_Rect bounds;
+    if (flipType == SDL_FLIP_HORIZONTAL) {
+        bounds = {hitbox.x + hitbox.w - xOffsetVal - wVal, hitbox.y + yOffsetVal, wVal, hVal};
+    } else {
+        bounds = {hitbox.x + xOffsetVal, hitbox.y + yOffsetVal, wVal, hVal};
+    }
+
+    //Render
+    render(renderer, bounds, flipType, &clip);
 }
 
 void Spritesheet::free() {
@@ -98,7 +133,22 @@ void Spritesheet::free() {
     }
 }
 
-void Spritesheet::setAnimationStartTime(Uint32 startTime) {
-    Spritesheet::animationStartTime = startTime;
+bool Spritesheet::animationDone(std::string animationName, Uint32 startTime, int fps) {
+    //Store animation data in variable
+    nlohmann::json animation = (mFrames)[animationName];
+
+    //Calculate current frame from game time
+    int numFrames = (int) animation["length"];
+    int framesPerSecond;
+    if (fps != -1) {
+        framesPerSecond = fps;
+    } else if (animation["fps"] != nullptr) {
+        framesPerSecond = animation["fps"];
+    } else {
+        framesPerSecond = FPS_DEFAULT;
+    }
+    int curTime = SDL_GetTicks();
+    int curFrame = (curTime - startTime) * framesPerSecond / 1000;
+    return curFrame >= numFrames;
 }
 

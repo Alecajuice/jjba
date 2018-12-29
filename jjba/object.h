@@ -9,25 +9,58 @@
 #include "spritesheet.h"
 
 class Object {
-private:
+protected:
     Hitbox mHitbox;
-    SDL_Point mVelocity;
-    Spritesheet mSprites;
+    Vector mVelocity; //Velocity in pixels/second
 public:
+    //Constructors
     Object();
 
     explicit Object(const Hitbox &mHitbox);
 
-    virtual void loadMedia(SDL_Renderer* renderer) = 0;
+    virtual //Member functions
+    void update(double deltaTime);
 
-    const Hitbox &getMHitbox() const;
+    //Getters and setters
+    Hitbox getMHitbox() const;
 
     void setMHitbox(const Hitbox &mHitbox);
 
-    Spritesheet &getMSprites();
+    const Vector &getMVelocity() const;
+
+    void setMVelocity(const Vector &mVelocity);
+
+};
+
+class SpriteObject : public Object {
+private:
+    Uint32 mAnimationStartTime;
+
+    //Flip type
+    SDL_RendererFlip mFlipType = SDL_FLIP_NONE;
+protected:
+    Spritesheet mSprites;
+public:
+    //Constructors
+    SpriteObject();
+
+    explicit SpriteObject(const Hitbox &mHitbox);
+
+    //Member functions
+    virtual void loadMedia(SDL_Renderer *renderer) = 0;
+
+    //Getters and setters
+    Uint32 getMAnimationStartTime() const;
+
+    void setMAnimationStartTime(Uint32 mAnimationStartTime);
+
+    SDL_RendererFlip getMFlipType() const;
+
+    void setMFlipType(SDL_RendererFlip mFlipType);
+
+    const Spritesheet &getMSprites() const;
 
     void setMSprites(const Spritesheet &mSprites);
-
 };
 
 #endif //JJBA_OBJECT_H

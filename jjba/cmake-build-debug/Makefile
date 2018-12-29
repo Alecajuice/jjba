@@ -338,33 +338,6 @@ spritesheet.cpp.s:
 	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/spritesheet.cpp.s
 .PHONY : spritesheet.cpp.s
 
-stand.obj: stand.cpp.obj
-
-.PHONY : stand.obj
-
-# target to build an object file
-stand.cpp.obj:
-	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/stand.cpp.obj
-.PHONY : stand.cpp.obj
-
-stand.i: stand.cpp.i
-
-.PHONY : stand.i
-
-# target to preprocess a source file
-stand.cpp.i:
-	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/stand.cpp.i
-.PHONY : stand.cpp.i
-
-stand.s: stand.cpp.s
-
-.PHONY : stand.s
-
-# target to generate assembly for a file
-stand.cpp.s:
-	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/stand.cpp.s
-.PHONY : stand.cpp.s
-
 standUser.obj: standUser.cpp.obj
 
 .PHONY : standUser.obj
@@ -425,9 +398,6 @@ help:
 	@echo ... spritesheet.obj
 	@echo ... spritesheet.i
 	@echo ... spritesheet.s
-	@echo ... stand.obj
-	@echo ... stand.i
-	@echo ... stand.s
 	@echo ... standUser.obj
 	@echo ... standUser.i
 	@echo ... standUser.s

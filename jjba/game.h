@@ -9,13 +9,13 @@
 
 class Game {
 private:
-    Jotaro temp;
+    Jotaro player;
 public:
     //Constructor
     Game(SDL_Renderer* renderer);
 
     //Update
-    void update();
+    bool update(const double deltaTime, SDL_GameController* gameController);
 
     //Render
     void render(SDL_Renderer* renderer);

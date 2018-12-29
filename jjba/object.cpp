@@ -4,7 +4,15 @@
 
 #include "object.h"
 
-const Hitbox &Object::getMHitbox() const {
+Object::Object() : mHitbox(0, 0, 0, 0), mVelocity({0, 0}) {}
+
+Object::Object(const Hitbox &mHitbox) : mHitbox(mHitbox), mVelocity({0, 0}) {}
+
+void Object::update(const double deltaTime) {
+    mHitbox.translate(mVelocity.x * deltaTime / 1000, mVelocity.y * deltaTime / 1000);
+}
+
+Hitbox Object::getMHitbox() const {
     return mHitbox;
 }
 
@@ -12,15 +20,40 @@ void Object::setMHitbox(const Hitbox &mHitbox) {
     Object::mHitbox = mHitbox;
 }
 
-Spritesheet &Object::getMSprites() {
+const Vector &Object::getMVelocity() const {
+    return mVelocity;
+}
+
+void Object::setMVelocity(const Vector &mVelocity) {
+    Object::mVelocity = mVelocity;
+}
+
+
+SpriteObject::SpriteObject() : Object() {}
+
+SpriteObject::SpriteObject(const Hitbox &mHitbox) : Object(mHitbox) {}
+
+Uint32 SpriteObject::getMAnimationStartTime() const {
+    return mAnimationStartTime;
+}
+
+SDL_RendererFlip SpriteObject::getMFlipType() const {
+    return mFlipType;
+}
+
+void SpriteObject::setMFlipType(SDL_RendererFlip mFlipType) {
+    SpriteObject::mFlipType = mFlipType;
+}
+
+void SpriteObject::setMAnimationStartTime(Uint32 mAnimationStartTime) {
+    SpriteObject::mAnimationStartTime = mAnimationStartTime;
+}
+
+const Spritesheet &SpriteObject::getMSprites() const {
     return mSprites;
 }
 
-void Object::setMSprites(const Spritesheet &mSprites) {
-    Object::mSprites = mSprites;
+void SpriteObject::setMSprites(const Spritesheet &mSprites) {
+    SpriteObject::mSprites = mSprites;
 }
-
-Object::Object() : mHitbox(0, 0, 0, 0), mVelocity({0, 0}) {}
-
-Object::Object(const Hitbox &mHitbox) : mHitbox(mHitbox), mVelocity({0, 0}) {}
 

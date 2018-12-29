@@ -18,6 +18,7 @@ CMakeFiles/jjba.dir/character.cpp.obj
  C:/MinGW/include/SDL2/close_code.h
  C:/Users/aleca/git/jjba/jjba/character.cpp
  C:/Users/aleca/git/jjba/jjba/character.h
+ C:/Users/aleca/git/jjba/jjba/constants.h
  C:/Users/aleca/git/jjba/jjba/hitbox.h
  C:/Users/aleca/git/jjba/jjba/object.h
  C:/Users/aleca/git/jjba/jjba/spritesheet.h
@@ -37,13 +38,13 @@ CMakeFiles/jjba.dir/game.cpp.obj
  C:/MinGW/include/SDL2/begin_code.h
  C:/MinGW/include/SDL2/close_code.h
  C:/Users/aleca/git/jjba/jjba/character.h
+ C:/Users/aleca/git/jjba/jjba/constants.h
  C:/Users/aleca/git/jjba/jjba/game.cpp
  C:/Users/aleca/git/jjba/jjba/game.h
  C:/Users/aleca/git/jjba/jjba/hitbox.h
  C:/Users/aleca/git/jjba/jjba/jotaro.h
  C:/Users/aleca/git/jjba/jjba/object.h
  C:/Users/aleca/git/jjba/jjba/spritesheet.h
- C:/Users/aleca/git/jjba/jjba/stand.h
  C:/Users/aleca/git/jjba/jjba/standUser.h
 CMakeFiles/jjba.dir/gameName.cpp.obj
  C:/Users/aleca/git/jjba/jjba/gameName.cpp
@@ -76,12 +77,12 @@ CMakeFiles/jjba.dir/jotaro.cpp.obj
  C:/MinGW/include/SDL2/begin_code.h
  C:/MinGW/include/SDL2/close_code.h
  C:/Users/aleca/git/jjba/jjba/character.h
+ C:/Users/aleca/git/jjba/jjba/constants.h
  C:/Users/aleca/git/jjba/jjba/hitbox.h
  C:/Users/aleca/git/jjba/jjba/jotaro.cpp
  C:/Users/aleca/git/jjba/jjba/jotaro.h
  C:/Users/aleca/git/jjba/jjba/object.h
  C:/Users/aleca/git/jjba/jjba/spritesheet.h
- C:/Users/aleca/git/jjba/jjba/stand.h
  C:/Users/aleca/git/jjba/jjba/standUser.h
 CMakeFiles/jjba.dir/main.cpp.obj
  C:/MinGW/include/SDL2/SDL.h
@@ -131,6 +132,7 @@ CMakeFiles/jjba.dir/main.cpp.obj
  C:/MinGW/include/SDL2/begin_code.h
  C:/MinGW/include/SDL2/close_code.h
  C:/Users/aleca/git/jjba/jjba/character.h
+ C:/Users/aleca/git/jjba/jjba/constants.h
  C:/Users/aleca/git/jjba/jjba/game.h
  C:/Users/aleca/git/jjba/jjba/gameName.h
  C:/Users/aleca/git/jjba/jjba/hitbox.h
@@ -138,7 +140,6 @@ CMakeFiles/jjba.dir/main.cpp.obj
  C:/Users/aleca/git/jjba/jjba/main.cpp
  C:/Users/aleca/git/jjba/jjba/object.h
  C:/Users/aleca/git/jjba/jjba/spritesheet.h
- C:/Users/aleca/git/jjba/jjba/stand.h
  C:/Users/aleca/git/jjba/jjba/standUser.h
 CMakeFiles/jjba.dir/object.cpp.obj
  C:/MinGW/include/SDL2/SDL_blendmode.h
@@ -176,27 +177,6 @@ CMakeFiles/jjba.dir/spritesheet.cpp.obj
  C:/MinGW/include/SDL2/close_code.h
  C:/Users/aleca/git/jjba/jjba/spritesheet.cpp
  C:/Users/aleca/git/jjba/jjba/spritesheet.h
-CMakeFiles/jjba.dir/stand.cpp.obj
- C:/MinGW/include/SDL2/SDL_blendmode.h
- C:/MinGW/include/SDL2/SDL_config.h
- C:/MinGW/include/SDL2/SDL_endian.h
- C:/MinGW/include/SDL2/SDL_error.h
- C:/MinGW/include/SDL2/SDL_pixels.h
- C:/MinGW/include/SDL2/SDL_platform.h
- C:/MinGW/include/SDL2/SDL_rect.h
- C:/MinGW/include/SDL2/SDL_render.h
- C:/MinGW/include/SDL2/SDL_rwops.h
- C:/MinGW/include/SDL2/SDL_stdinc.h
- C:/MinGW/include/SDL2/SDL_surface.h
- C:/MinGW/include/SDL2/SDL_video.h
- C:/MinGW/include/SDL2/begin_code.h
- C:/MinGW/include/SDL2/close_code.h
- C:/Users/aleca/git/jjba/jjba/character.h
- C:/Users/aleca/git/jjba/jjba/hitbox.h
- C:/Users/aleca/git/jjba/jjba/object.h
- C:/Users/aleca/git/jjba/jjba/spritesheet.h
- C:/Users/aleca/git/jjba/jjba/stand.cpp
- C:/Users/aleca/git/jjba/jjba/stand.h
 CMakeFiles/jjba.dir/standUser.cpp.obj
  C:/MinGW/include/SDL2/SDL_blendmode.h
  C:/MinGW/include/SDL2/SDL_config.h
@@ -213,9 +193,9 @@ CMakeFiles/jjba.dir/standUser.cpp.obj
  C:/MinGW/include/SDL2/begin_code.h
  C:/MinGW/include/SDL2/close_code.h
  C:/Users/aleca/git/jjba/jjba/character.h
+ C:/Users/aleca/git/jjba/jjba/constants.h
  C:/Users/aleca/git/jjba/jjba/hitbox.h
  C:/Users/aleca/git/jjba/jjba/object.h
  C:/Users/aleca/git/jjba/jjba/spritesheet.h
- C:/Users/aleca/git/jjba/jjba/stand.h
  C:/Users/aleca/git/jjba/jjba/standUser.cpp
  C:/Users/aleca/git/jjba/jjba/standUser.h
