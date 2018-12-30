@@ -25,3 +25,7 @@ const int Jotaro::getMoveSpeed() const {
 const int Jotaro::getStandMoveSpeed() const {
     return 600;
 }
+
+const int Jotaro::getStandRange() const {
+    return 200;
+}

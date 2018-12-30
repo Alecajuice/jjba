@@ -18,6 +18,7 @@ public:
 
     const int getMoveSpeed() const override;
     const int getStandMoveSpeed() const override;
+    const int getStandRange() const override;
 };
 
 #endif //JJBA_JOTARO_H

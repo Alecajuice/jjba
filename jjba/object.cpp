@@ -28,6 +28,10 @@ void Object::setMVelocity(const Vector &mVelocity) {
     Object::mVelocity = mVelocity;
 }
 
+void Object::setPosition(double x, double y) {
+    mHitbox.setPosition(x, y);
+}
+
 
 SpriteObject::SpriteObject() : Object() {}
 

@@ -35,6 +35,8 @@ public:
     //Getters and setters
     virtual const int getStandMoveSpeed() const = 0;
 
+    virtual const int getStandRange() const = 0;
+
     const std::string &getStandState() const;
     void setStandState(const std::string &state);
 };

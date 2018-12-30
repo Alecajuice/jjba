@@ -227,5 +227,15 @@ void StandUser::update(double deltaTime) {
         setStandState("STAND_IDLE");
     }
     mStand.update(deltaTime);
+
+    //Keep stand within range
+    double dx = mStand.getMHitbox().getX() - mHitbox.getX();
+    double dy = mStand.getMHitbox().getY() - mHitbox.getY();
+    double dist = std::pow(std::pow(dx, 2) + std::pow(dy, 2), 0.5);
+    //If outside of range
+    if (dist > getStandRange()) {
+        mStand.setPosition(mHitbox.getX() + dx * getStandRange() / dist,
+                           mHitbox.getY() + dy * getStandRange() / dist);
+    }
 }
 

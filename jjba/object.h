@@ -18,8 +18,10 @@ public:
 
     explicit Object(const Hitbox &mHitbox);
 
-    virtual //Member functions
-    void update(double deltaTime);
+    //Member functions
+    virtual void update(double deltaTime);
+
+    void setPosition(double x, double y);
 
     //Getters and setters
     Hitbox getMHitbox() const;

@@ -12,50 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6983ec43-ca68-41b1-9f9e-4ced1ffe77e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/constants.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/character.h" beforeDir="false" afterPath="$PROJECT_DIR$/character.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/character.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/character.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/game.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/hitbox.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/hitbox.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/jotaro.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/game.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/jotaro.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/jotaro.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/object.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/object.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/spritesheet.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/spritesheet.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/stand.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/standUser.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/spritesheets/JotaroKujo.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/spritesheets/JotaroKujo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/jjba.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/jjba.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/standUser.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jjba.dir/standUser.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/jjba.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/jjba.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake/FindSDL2.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake/FindSDL2.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.h" beforeDir="false" afterPath="$PROJECT_DIR$/game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hitbox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/hitbox.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hitbox.h" beforeDir="false" afterPath="$PROJECT_DIR$/hitbox.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jotaro.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/jotaro.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jotaro.h" beforeDir="false" afterPath="$PROJECT_DIR$/jotaro.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/object.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/object.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/object.h" beforeDir="false" afterPath="$PROJECT_DIR$/object.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spritesheet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/spritesheet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spritesheet.h" beforeDir="false" afterPath="$PROJECT_DIR$/spritesheet.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stand.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stand.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/standUser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/standUser.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/standUser.h" beforeDir="false" afterPath="$PROJECT_DIR$/standUser.h" afterDir="false" />
     </list>
@@ -87,7 +57,7 @@
           <entry key="CMakeLists.txt" value="4" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="8" />
-          <entry key="ObjectiveC" value="136" />
+          <entry key="ObjectiveC" value="140" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -95,7 +65,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="146" />
           <entry key="JSON" value="675" />
-          <entry key="ObjectiveC" value="15009" />
+          <entry key="ObjectiveC" value="15616" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
@@ -103,8 +73,8 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cmake" value="2" />
-          <entry key="cpp" value="69" />
-          <entry key="h" value="66" />
+          <entry key="cpp" value="71" />
+          <entry key="h" value="68" />
           <entry key="hpp" value="1" />
           <entry key="json" value="8" />
           <entry key="png" value="1" />
@@ -114,8 +84,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="11156" />
-          <entry key="h" value="3853" />
+          <entry key="cpp" value="11508" />
+          <entry key="h" value="4108" />
           <entry key="json" value="675" />
           <entry key="txt" value="146" />
         </counts>
@@ -124,11 +94,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/object.cpp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/object.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-352">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state relative-caret-position="192">
+              <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+              <folding>
+                <element signature="e#87#106#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,8 +109,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/standUser.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="193" column="46" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
+            <state relative-caret-position="225">
+              <caret line="235" column="33" selection-start-line="235" selection-start-column="33" selection-end-line="235" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/object.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -147,6 +129,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="417">
               <caret line="151" column="22" selection-start-line="151" selection-start-column="22" selection-end-line="151" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hitbox.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+              <folding>
+                <element signature="e#42#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,8 +160,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/standUser.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="321">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#93#115#0" expanded="true" />
               </folding>
@@ -187,38 +181,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jotaro.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            <state relative-caret-position="464">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/assets/spritesheets/JotaroKujo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="229" column="13" selection-start-line="229" selection-start-column="13" selection-end-line="229" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmake-build-debug/assets/spritesheets/JotaroKujo_old.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="293" column="1" selection-start-line="293" selection-start-column="1" selection-end-line="293" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/character.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-127">
-              <caret column="2" selection-start-column="2" selection-end-column="2" />
-              <folding>
-                <element signature="e#93#112#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-3">
+              <caret line="224" column="7" lean-forward="true" selection-start-line="224" selection-start-column="7" selection-end-line="224" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -250,23 +223,23 @@
         <option value="$PROJECT_DIR$/stand.cpp" />
         <option value="$PROJECT_DIR$/stand.h" />
         <option value="$PROJECT_DIR$/constants.h" />
-        <option value="$PROJECT_DIR$/object.cpp" />
-        <option value="$PROJECT_DIR$/object.h" />
         <option value="$PROJECT_DIR$/hitbox.h" />
         <option value="$PROJECT_DIR$/hitbox.cpp" />
-        <option value="$PROJECT_DIR$/jotaro.cpp" />
-        <option value="$PROJECT_DIR$/jotaro.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/game.h" />
         <option value="$PROJECT_DIR$/game.cpp" />
         <option value="$PROJECT_DIR$/character.h" />
         <option value="$PROJECT_DIR$/character.cpp" />
-        <option value="$PROJECT_DIR$/standUser.h" />
         <option value="$PROJECT_DIR$/spritesheet.cpp" />
         <option value="$PROJECT_DIR$/spritesheet.h" />
         <option value="$PROJECT_DIR$/cmake-build-debug/assets/spritesheets/JotaroKujo_old.json" />
-        <option value="$PROJECT_DIR$/standUser.cpp" />
         <option value="$PROJECT_DIR$/cmake-build-debug/assets/spritesheets/JotaroKujo.json" />
+        <option value="$PROJECT_DIR$/standUser.h" />
+        <option value="$PROJECT_DIR$/jotaro.h" />
+        <option value="$PROJECT_DIR$/jotaro.cpp" />
+        <option value="$PROJECT_DIR$/standUser.cpp" />
+        <option value="$PROJECT_DIR$/object.h" />
+        <option value="$PROJECT_DIR$/object.cpp" />
       </list>
     </option>
   </component>
@@ -382,12 +355,12 @@
       <workItem from="1543279164606" duration="15878000" />
       <workItem from="1545026218375" duration="1853000" />
       <workItem from="1545356614916" duration="2097000" />
-      <workItem from="1546042511753" duration="8826000" />
+      <workItem from="1546042511753" duration="14490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88453000" />
+    <option name="totallyTimeSpent" value="94117000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -492,26 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/object.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding>
-            <element signature="e#87#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hitbox.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding>
-            <element signature="e#42#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hitbox.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -543,20 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jotaro.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/character.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-127">
@@ -567,27 +506,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jotaro.cpp">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/assets/spritesheets/JotaroKujo_old.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        <state relative-caret-position="493">
+          <caret line="293" column="1" selection-start-line="293" selection-start-column="1" selection-end-line="293" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/character.cpp">
+    <entry file="file://$PROJECT_DIR$/jotaro.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207">
-          <caret line="91" column="60" selection-start-line="91" selection-start-column="60" selection-end-line="91" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/standUser.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding>
-            <element signature="e#93#115#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="320">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -601,6 +530,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/character.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-207">
+          <caret line="91" column="60" selection-start-line="91" selection-start-column="60" selection-end-line="91" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spritesheet.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
@@ -608,24 +544,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/assets/spritesheets/JotaroKujo_old.json">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/assets/spritesheets/JotaroKujo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="293" column="1" selection-start-line="293" selection-start-column="1" selection-end-line="293" selection-end-column="1" />
+        <state relative-caret-position="-3">
+          <caret line="224" column="7" lean-forward="true" selection-start-line="224" selection-start-column="7" selection-end-line="224" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/standUser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#93#115#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/standUser.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="193" column="46" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
+        <state relative-caret-position="225">
+          <caret line="235" column="33" selection-start-line="235" selection-start-column="33" selection-end-line="235" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/assets/spritesheets/JotaroKujo.json">
+    <entry file="file://$PROJECT_DIR$/hitbox.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="229" column="13" selection-start-line="229" selection-start-column="13" selection-end-line="229" selection-end-column="13" />
+        <state relative-caret-position="416">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="e#42#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jotaro.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <element signature="e#87#106#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
