@@ -4,8 +4,7 @@
 
 #include "jotaro.h"
 
-Jotaro::Jotaro() : StandUser(Hitbox(300, 300, 56, 110), Hitbox(300, 300, 104, 107)){
-
+Jotaro::Jotaro() : StandUser({300, 300}, {300, 300}, {Hitbox(1, 1, 56, 110)}, {Hitbox(0, 0, 104, 107)}) {
 }
 
 void Jotaro::loadMedia(SDL_Renderer* renderer) {

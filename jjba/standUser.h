@@ -21,7 +21,10 @@ public:
     //Constructors
     StandUser();
 
-    explicit StandUser(Hitbox mHitbox, Hitbox mStandHitbox);
+    StandUser(Vector position, Vector standPosition, std::vector<Hitbox> mHitboxes, std::vector<Hitbox> mStandHitboxes);
+
+    StandUser(double x, double y, double standX, double standY, std::vector<Hitbox> mHitboxes,
+              std::vector<Hitbox> mStandHitboxes);
 
     //Member functions
     void update(double deltaTime) override;
@@ -30,7 +33,7 @@ public:
 
     void handleEvent(SDL_Event e) override;
 
-    void readInput(SDL_GameController* gameController) override;
+    void readInput(SDL_GameController *gameController) override;
 
     //Getters and setters
     virtual const int getStandMoveSpeed() const = 0;
@@ -38,6 +41,7 @@ public:
     virtual const int getStandRange() const = 0;
 
     const std::string &getStandState() const;
+
     void setStandState(const std::string &state);
 };
 

@@ -4,20 +4,26 @@
 
 #include "object.h"
 
-Object::Object() : mHitbox(0, 0, 0, 0), mVelocity({0, 0}) {}
+Object::Object() : mPosition({0, 0}), mVelocity({0, 0}) {
+    mHitboxes.emplace_back(0, 0, 0, 0);
+}
 
-Object::Object(const Hitbox &mHitbox) : mHitbox(mHitbox), mVelocity({0, 0}) {}
+Object::Object(Vector position, const std::vector<Hitbox> mHitboxes) : mPosition(position), mVelocity({0, 0}), mHitboxes(mHitboxes) {}
+
+Object::Object(double x, double y, const std::vector<Hitbox> mHitboxes) : mPosition({x, y}), mVelocity({0, 0}), mHitboxes(mHitboxes) {}
 
 void Object::update(const double deltaTime) {
-    mHitbox.translate(mVelocity.x * deltaTime / 1000, mVelocity.y * deltaTime / 1000);
+    mPosition.x += mVelocity.x * deltaTime / 1000;
+    mPosition.y += mVelocity.y * deltaTime / 1000;
+//    mHitbox.translate(mVelocity.x * deltaTime / 1000, mVelocity.y * deltaTime / 1000);
 }
 
-Hitbox Object::getMHitbox() const {
-    return mHitbox;
+std::vector<Hitbox> Object::getMHitboxes() const {
+    return mHitboxes;
 }
 
-void Object::setMHitbox(const Hitbox &mHitbox) {
-    Object::mHitbox = mHitbox;
+void Object::setMHitboxes(const std::vector<Hitbox> mHitboxes) {
+    Object::mHitboxes = mHitboxes;
 }
 
 const Vector &Object::getMVelocity() const {
@@ -29,13 +35,24 @@ void Object::setMVelocity(const Vector &mVelocity) {
 }
 
 void Object::setPosition(double x, double y) {
-    mHitbox.setPosition(x, y);
+    mPosition.x = x;
+    mPosition.y = y;
+}
+
+const Vector &Object::getMPosition() const {
+    return mPosition;
+}
+
+void Object::setMPosition(const Vector &mPosition) {
+    Object::mPosition = mPosition;
 }
 
 
 SpriteObject::SpriteObject() : Object() {}
 
-SpriteObject::SpriteObject(const Hitbox &mHitbox) : Object(mHitbox) {}
+SpriteObject::SpriteObject(Vector position, const std::vector<Hitbox> mHitboxes) : Object(position, mHitboxes) {}
+
+SpriteObject::SpriteObject(double x, double y, const std::vector<Hitbox> mHitboxes) : Object(x, y, mHitboxes) {}
 
 Uint32 SpriteObject::getMAnimationStartTime() const {
     return mAnimationStartTime;

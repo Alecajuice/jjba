@@ -75,7 +75,7 @@ void Hitbox::setY(double y) {
 }
 
 double Hitbox::getW() const {
-    return position.x;
+    return size.x;
 }
 
 void Hitbox::setW(double w) {
@@ -83,13 +83,31 @@ void Hitbox::setW(double w) {
 }
 
 double Hitbox::getH() const {
-    return position.y;
+    return size.y;
 }
 
 void Hitbox::setH(double h) {
     size.y = h;
 }
 
-
+Hitbox getBoundingHitbox(std::vector<Hitbox> hitboxes) {
+    if (hitboxes.empty()) {
+        printf("shit\n");
+        return {0, 0, 0, 0};
+    }
+    double minx = hitboxes.front().getX();
+    double miny = hitboxes.front().getY();
+    double maxx = minx + hitboxes.front().getW();
+    double maxy = miny + hitboxes.front().getH();
+//    printf("%lf\n", hitboxes.front().getW());
+//    printf("minx: %lf, miny: %lf, maxx: %lf, maxy: %lf\n", minx, miny, maxx, maxy);
+    for (int i = 1; i < hitboxes.size(); i++) {
+        if (minx > hitboxes[i].getX()) minx = hitboxes[i].getX();
+        if (miny > hitboxes[i].getY()) miny = hitboxes[i].getY();
+        if (maxx < hitboxes[i].getX() + hitboxes[i].getW()) maxx = hitboxes[i].getX() + hitboxes[i].getW();
+        if (maxy < hitboxes[i].getY() + hitboxes[i].getH()) maxy = hitboxes[i].getY() + hitboxes[i].getH();
+    }
+    return {minx, miny, maxx - minx, maxy - miny};
+}
 
 

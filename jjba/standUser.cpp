@@ -1,28 +1,39 @@
+#include <utility>
+
+#include <utility>
+
 //
 // Created by aleca on 11/17/2018.
 //
 
 #include "standUser.h"
 
-StandUser::StandUser() {
+StandUser::StandUser() = default;
 
+StandUser::StandUser(Vector position, Vector standPosition, std::vector<Hitbox> mHitboxes,
+                     std::vector<Hitbox> mStandHitboxes) : Character(position, std::move(mHitboxes)) {
+    mStand.setMPosition(standPosition);
+    mStand.setMHitboxes(std::move(mStandHitboxes));
 }
 
-StandUser::StandUser(Hitbox mHitbox, Hitbox mStandHitbox) : Character(mHitbox) {
-    mStand.setMHitbox(mStandHitbox);
-}
+StandUser::StandUser(double x, double y, double standX, double standY, std::vector<Hitbox> mHitboxes,
+                     std::vector<Hitbox> mStandHitboxes) : StandUser({x, y}, {standX, standY}, std::move(mHitboxes),
+                                                                     std::move(mStandHitboxes)) {}
 
 void StandUser::render(SDL_Renderer *renderer) {
     //Draw stand
     //Draw hitbox
     SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0xFF, 0xFF);
+    Hitbox boundingHitbox = getBoundingHitbox(mStand.getMHitboxes());
+    boundingHitbox.setPosition(
+            {boundingHitbox.getX() + mStand.getMPosition().x, boundingHitbox.getY() + mStand.getMPosition().y});
     auto *tempStandHitbox = new SDL_Rect;
-    *tempStandHitbox = mStand.getMHitbox().getSDL_Rect();
+    *tempStandHitbox = boundingHitbox.getSDL_Rect();
     SDL_RenderDrawRect(renderer, tempStandHitbox);
     delete tempStandHitbox;
 
     //Draw sprite
-    mSprites.render(renderer, mStand.getMHitbox().getSDL_Rect(), mStandState, mStandAnimationStartTime, mStandFlipType);
+    mSprites.render(renderer, boundingHitbox.getSDL_Rect(), mStandState, mStandAnimationStartTime, mStandFlipType);
 
     //Draw character
     Character::render(renderer);
@@ -229,13 +240,14 @@ void StandUser::update(double deltaTime) {
     mStand.update(deltaTime);
 
     //Keep stand within range
-    double dx = mStand.getMHitbox().getX() - mHitbox.getX();
-    double dy = mStand.getMHitbox().getY() - mHitbox.getY();
+    double dx = mStand.getMPosition().x - getMPosition().x;
+    double dy = mStand.getMPosition().y - getMPosition().y;
     double dist = std::pow(std::pow(dx, 2) + std::pow(dy, 2), 0.5);
     //If outside of range
     if (dist > getStandRange()) {
-        mStand.setPosition(mHitbox.getX() + dx * getStandRange() / dist,
-                           mHitbox.getY() + dy * getStandRange() / dist);
+        mStand.setPosition(getMPosition().x + dx * getStandRange() / dist,
+                           getMPosition().y + dy * getStandRange() / dist);
     }
 }
+
 

@@ -6,6 +6,7 @@
 #define JJBA_HITBOX_H
 
 #include <SDL_rect.h>
+#include <vector>
 
 struct Vector {
     double x, y;
@@ -61,5 +62,7 @@ public:
 
     void setH(double h);
 };
+
+Hitbox getBoundingHitbox(std::vector<Hitbox> hitboxes);
 
 #endif //JJBA_HITBOX_H

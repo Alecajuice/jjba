@@ -16,7 +16,9 @@ public:
     //Constructor
     Character();
 
-    explicit Character(Hitbox &mHitbox);
+    Character(Vector position, std::vector<Hitbox> mHitbox);
+
+    Character(double x, double y, std::vector<Hitbox> mHitbox);
 
     //Member functions
     virtual void handleEvent(SDL_Event e);

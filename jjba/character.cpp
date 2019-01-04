@@ -4,11 +4,11 @@
 
 #include "character.h"
 
-Character::Character() {
+Character::Character() {}
 
-}
+Character::Character(Vector position, std::vector<Hitbox> mHitboxes) : SpriteObject(position, mHitboxes) {}
 
-Character::Character(Hitbox &mHitbox) : SpriteObject(mHitbox) {}
+Character::Character(double x, double y, std::vector<Hitbox> mHitboxes) : SpriteObject(x, y, mHitboxes) {}
 
 void Character::handleEvent(SDL_Event e) {
     //Keyboard events
@@ -96,17 +96,19 @@ void Character::readInput(SDL_GameController* gameController) {
 void Character::render(SDL_Renderer *renderer) {
     //Draw hitbox
     SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
+    Hitbox boundingHitbox = getBoundingHitbox(mHitboxes);
+    boundingHitbox.setPosition({boundingHitbox.getX() + mPosition.x, boundingHitbox.getY() + mPosition.y});
     auto* tempHitbox = new SDL_Rect;
-    *tempHitbox = mHitbox.getSDL_Rect();
+    *tempHitbox = boundingHitbox.getSDL_Rect();
     SDL_RenderDrawRect(renderer, tempHitbox);
     delete tempHitbox;
 
     //Draw sprite
     if(getState() == "WALKING") {
         int fps = static_cast<int>(std::abs(getMVelocity().x) * WALKING_ANIMATION_SCALER);
-        mSprites.render(renderer, mHitbox.getSDL_Rect(), getState(), getMAnimationStartTime(), getMFlipType(), fps);
+        mSprites.render(renderer, boundingHitbox.getSDL_Rect(), getState(), getMAnimationStartTime(), getMFlipType(), fps);
     } else {
-        mSprites.render(renderer, mHitbox.getSDL_Rect(), getState(), getMAnimationStartTime(), getMFlipType());
+        mSprites.render(renderer, boundingHitbox.getSDL_Rect(), getState(), getMAnimationStartTime(), getMFlipType());
     }
 }
 

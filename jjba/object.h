@@ -10,13 +10,17 @@
 
 class Object {
 protected:
-    Hitbox mHitbox;
+    Vector mPosition; //Position of center of motion
     Vector mVelocity; //Velocity in pixels/second
+//    Hitbox mHitboxes[];
+    std::vector<Hitbox> mHitboxes;
 public:
     //Constructors
     Object();
 
-    explicit Object(const Hitbox &mHitbox);
+    Object(Vector position, std::vector<Hitbox> mHitboxes);
+
+    Object(double x, double y, std::vector<Hitbox> mHitboxes);
 
     //Member functions
     virtual void update(double deltaTime);
@@ -24,13 +28,17 @@ public:
     void setPosition(double x, double y);
 
     //Getters and setters
-    Hitbox getMHitbox() const;
+    std::vector<Hitbox> getMHitboxes() const;
 
-    void setMHitbox(const Hitbox &mHitbox);
+    void setMHitboxes(std::vector<Hitbox> mHitbox);
 
     const Vector &getMVelocity() const;
 
     void setMVelocity(const Vector &mVelocity);
+
+    const Vector &getMPosition() const;
+
+    void setMPosition(const Vector &mPosition);
 
 };
 
@@ -46,7 +54,9 @@ public:
     //Constructors
     SpriteObject();
 
-    explicit SpriteObject(const Hitbox &mHitbox);
+    SpriteObject(Vector position, std::vector<Hitbox> mHitboxes);
+
+    SpriteObject(double x, double y, std::vector<Hitbox> mHitboxes);
 
     //Member functions
     virtual void loadMedia(SDL_Renderer *renderer) = 0;
