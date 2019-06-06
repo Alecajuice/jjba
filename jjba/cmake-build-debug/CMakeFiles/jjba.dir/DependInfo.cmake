@@ -4,22 +4,22 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/aleca/git/jjba/jjba/character.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/character.cpp.obj"
-  "C:/Users/aleca/git/jjba/jjba/game.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/game.cpp.obj"
-  "C:/Users/aleca/git/jjba/jjba/gameName.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/gameName.cpp.obj"
-  "C:/Users/aleca/git/jjba/jjba/hitbox.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/hitbox.cpp.obj"
-  "C:/Users/aleca/git/jjba/jjba/jotaro.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/jotaro.cpp.obj"
-  "C:/Users/aleca/git/jjba/jjba/level.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/level.cpp.obj"
-  "C:/Users/aleca/git/jjba/jjba/main.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/main.cpp.obj"
-  "C:/Users/aleca/git/jjba/jjba/object.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/object.cpp.obj"
-  "C:/Users/aleca/git/jjba/jjba/spritesheet.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/spritesheet.cpp.obj"
-  "C:/Users/aleca/git/jjba/jjba/standUser.cpp" "C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/standUser.cpp.obj"
+  "/home/alecajuice/Documents/git/jjba/jjba/character.cpp" "/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/character.cpp.o"
+  "/home/alecajuice/Documents/git/jjba/jjba/game.cpp" "/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/game.cpp.o"
+  "/home/alecajuice/Documents/git/jjba/jjba/gameName.cpp" "/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/gameName.cpp.o"
+  "/home/alecajuice/Documents/git/jjba/jjba/hitbox.cpp" "/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/hitbox.cpp.o"
+  "/home/alecajuice/Documents/git/jjba/jjba/jotaro.cpp" "/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/jotaro.cpp.o"
+  "/home/alecajuice/Documents/git/jjba/jjba/level.cpp" "/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/level.cpp.o"
+  "/home/alecajuice/Documents/git/jjba/jjba/main.cpp" "/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/main.cpp.o"
+  "/home/alecajuice/Documents/git/jjba/jjba/object.cpp" "/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/object.cpp.o"
+  "/home/alecajuice/Documents/git/jjba/jjba/spritesheet.cpp" "/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/spritesheet.cpp.o"
+  "/home/alecajuice/Documents/git/jjba/jjba/standUser.cpp" "/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir/standUser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "C:/MinGW/include/SDL2"
+  "/usr/include/SDL2"
   )
 
 # Targets to which this target links.

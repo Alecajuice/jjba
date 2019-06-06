@@ -1,7 +1,7 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
 #include <SDL_image.h>
-#include <afxres.h>
+//#include <afxres.h>
 
 #include "gameName.h"
 

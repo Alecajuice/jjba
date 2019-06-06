@@ -1,3 +1,3 @@
-C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir
-C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/aleca/git/jjba/jjba/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/jjba.dir
+/home/alecajuice/Documents/git/jjba/jjba/cmake-build-debug/CMakeFiles/edit_cache.dir
