@@ -123,6 +123,33 @@ jjba/fast:
 	$(MAKE) -f CMakeFiles/jjba.dir/build.make CMakeFiles/jjba.dir/build
 .PHONY : jjba/fast
 
+attack.o: attack.cpp.o
+
+.PHONY : attack.o
+
+# target to build an object file
+attack.cpp.o:
+	$(MAKE) -f CMakeFiles/jjba.dir/build.make CMakeFiles/jjba.dir/attack.cpp.o
+.PHONY : attack.cpp.o
+
+attack.i: attack.cpp.i
+
+.PHONY : attack.i
+
+# target to preprocess a source file
+attack.cpp.i:
+	$(MAKE) -f CMakeFiles/jjba.dir/build.make CMakeFiles/jjba.dir/attack.cpp.i
+.PHONY : attack.cpp.i
+
+attack.s: attack.cpp.s
+
+.PHONY : attack.s
+
+# target to generate assembly for a file
+attack.cpp.s:
+	$(MAKE) -f CMakeFiles/jjba.dir/build.make CMakeFiles/jjba.dir/attack.cpp.s
+.PHONY : attack.cpp.s
+
 character.o: character.cpp.o
 
 .PHONY : character.o
@@ -402,6 +429,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... jjba"
 	@echo "... edit_cache"
+	@echo "... attack.o"
+	@echo "... attack.i"
+	@echo "... attack.s"
 	@echo "... character.o"
 	@echo "... character.i"
 	@echo "... character.s"

@@ -86,6 +86,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/alecajuice/Documents/git/jjba/jjba/attack.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="/home/alecajuice/Documents/git/jjba/jjba/attack.h">
+			<Option target="jjba"/>
+		</Unit>
 		<Unit filename="/home/alecajuice/Documents/git/jjba/jjba/character.cpp">
 			<Option target="jjba"/>
 		</Unit>

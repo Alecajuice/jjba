@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/jjba.dir/jotaro.cpp.o"
   "CMakeFiles/jjba.dir/spritesheet.cpp.o"
   "CMakeFiles/jjba.dir/level.cpp.o"
+  "CMakeFiles/jjba.dir/attack.cpp.o"
   "jjba.pdb"
   "jjba"
 )
