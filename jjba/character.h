@@ -25,7 +25,7 @@ public:
 
     virtual void handleEvent(SDL_Event e);
 
-    virtual void readInput(SDL_GameController *gameController);
+    virtual void readInput(double deltaTime, SDL_GameController *gameController);
 
     virtual void render(SDL_Renderer *renderer);
 

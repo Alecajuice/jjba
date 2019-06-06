@@ -11,8 +11,16 @@ Character::Character(Vector position, std::vector<Hitbox> mHitboxes) : SpriteObj
 Character::Character(double x, double y, std::vector<Hitbox> mHitboxes) : SpriteObject(x, y, std::move(mHitboxes)) {}
 
 void Character::update(double deltaTime) {
-    mVelocity.y += ACCEL_GRAVITY * deltaTime / 1000;
     Object::update(deltaTime);
+
+    //Decrease velocity when dash-attacking
+    if (mState == "ATTACK") {
+        if (mVelocity.x > 0) {
+            mVelocity.x = std::max(0.0, mVelocity.x - DECEL_DASH_ATTACK * deltaTime / 1000);
+        } else {
+            mVelocity.x = std::min(0.0, mVelocity.x + DECEL_DASH_ATTACK * deltaTime / 1000);
+        }
+    }
 
     //Check for animation end
     //Jumping animation
@@ -31,19 +39,21 @@ void Character::handleEvent(SDL_Event e) {
     if (mState == "IDLE" || mState == "WALKING") {
         if (e.type == SDL_KEYDOWN) {
             switch (e.key.keysym.sym) {
-                case SDLK_w:
+                case KEY_JUMP:
                     mVelocity.y = -JUMP_VELOCITY;
                     setState("JUMPING");
+                case KEY_ATTACK:
+                    setState("ATTACK");
                 default:
                     break;
             }
         }
 
         //If joysticks are connected
-        if (SDL_NumJoysticks() > 1) {
+        if (SDL_NumJoysticks() > 0) {
             if (e.type == SDL_CONTROLLERBUTTONDOWN) {
                 //Motion on controller 1
-                if (e.cbutton.which == 1) {
+                if (e.cbutton.which == 0) {
                     if (e.cbutton.button == SDL_CONTROLLER_BUTTON_A) {
                         mVelocity.y = -JUMP_VELOCITY;
                         setState("JUMPING");
@@ -56,29 +66,29 @@ void Character::handleEvent(SDL_Event e) {
     }
 }
 
-void Character::readInput(SDL_GameController *gameController) {
+void Character::readInput(double deltaTime, SDL_GameController *gameController) {
     if (mState == "IDLE" || mState == "WALKING") {
         double xVelocity = 0;
 
         //Keyboard input
         const Uint8 *currentKeyStates = SDL_GetKeyboardState(nullptr);
         //X movement
-        if (currentKeyStates[SDL_SCANCODE_A] && !currentKeyStates[SDL_SCANCODE_D]) {
+        if (currentKeyStates[SC_MOVE_LEFT] && !currentKeyStates[SC_MOVE_RIGHT]) {
             xVelocity = -getMoveSpeed();
             setMFlipType(SDL_FLIP_HORIZONTAL);
             setState("WALKING");
-        } else if (!currentKeyStates[SDL_SCANCODE_A] && currentKeyStates[SDL_SCANCODE_D]) {
+        } else if (!currentKeyStates[SC_MOVE_LEFT] && currentKeyStates[SC_MOVE_RIGHT]) {
             xVelocity = getMoveSpeed();
             setMFlipType(SDL_FLIP_NONE);
             setState("WALKING");
         }
 
         //Controller input
-        if (SDL_NumJoysticks() > 1) {
+        if (SDL_NumJoysticks() > 0) {
             Sint16 x = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_LEFTX);
             //X movement
             if (std::abs(x) > JOYSTICK_DEAD_ZONE) {
-                if (!currentKeyStates[SDL_SCANCODE_A] && !currentKeyStates[SDL_SCANCODE_D]) {
+                if (!currentKeyStates[SC_MOVE_LEFT] && !currentKeyStates[SC_MOVE_RIGHT]) {
                     xVelocity = (double)(x * getMoveSpeed()) / JOYSTICK_SCALER;
                     //Flip
                     if (x > 0) {
@@ -96,32 +106,34 @@ void Character::readInput(SDL_GameController *gameController) {
             setState("IDLE");
         }
         mVelocity.x = xVelocity;
-    } else {
+    } else if (mState == "JUMPING" || mState == "FALLING") {
         const Uint8 *currentKeyStates = SDL_GetKeyboardState(nullptr);
         //X movement
-        if (currentKeyStates[SDL_SCANCODE_A] && !currentKeyStates[SDL_SCANCODE_D]) {
+        if (currentKeyStates[SC_MOVE_LEFT] && !currentKeyStates[SC_MOVE_RIGHT]) {
             mVelocity.x = fmax(fmin(
-                    mVelocity.x - getMoveSpeed() * AIR_MOVE_SPEED_MULTIPLIER,
+                    mVelocity.x - getMoveSpeed() * AIR_MOVE_SPEED_MULTIPLIER * deltaTime / 1000,
                     getMoveSpeed()), -getMoveSpeed());
-        } else if (!currentKeyStates[SDL_SCANCODE_A] && currentKeyStates[SDL_SCANCODE_D]) {
+        } else if (!currentKeyStates[SC_MOVE_LEFT] && currentKeyStates[SC_MOVE_RIGHT]) {
             mVelocity.x = fmax(fmin(
-                    mVelocity.x + getMoveSpeed() * AIR_MOVE_SPEED_MULTIPLIER,
+                    mVelocity.x + getMoveSpeed() * AIR_MOVE_SPEED_MULTIPLIER * deltaTime / 1000,
                     getMoveSpeed()), -getMoveSpeed());
         }
 
         //If joysticks are connected
-        if (SDL_NumJoysticks() > 1) {
+        if (SDL_NumJoysticks() > 0) {
             Sint16 x = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_LEFTX);
             //X movement
             if (std::abs(x) > JOYSTICK_DEAD_ZONE) {
-                if (!currentKeyStates[SDL_SCANCODE_A] && !currentKeyStates[SDL_SCANCODE_D]) {
+                if (!currentKeyStates[SC_MOVE_LEFT] && !currentKeyStates[SC_MOVE_RIGHT]) {
                     mVelocity.x = fmax(fmin(
-                            mVelocity.x + (x * getMoveSpeed() * AIR_MOVE_SPEED_MULTIPLIER) / JOYSTICK_SCALER,
+                            mVelocity.x + (x * getMoveSpeed() * AIR_MOVE_SPEED_MULTIPLIER * deltaTime / 1000) / JOYSTICK_SCALER,
                             getMoveSpeed()), -getMoveSpeed());
                 }
             }
         }
     }
+
+    mVelocity.y += ACCEL_GRAVITY * deltaTime / 1000;
 }
 
 void Character::render(SDL_Renderer *renderer) {

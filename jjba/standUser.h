@@ -33,7 +33,7 @@ public:
 
     void handleEvent(SDL_Event e) override;
 
-    void readInput(SDL_GameController *gameController) override;
+    void readInput(double deltaTime, SDL_GameController *gameController) override;
 
     Vector staticCollisionCheck(Object other) override; //Returns collision response vector
 

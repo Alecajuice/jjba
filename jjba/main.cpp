@@ -103,7 +103,7 @@ bool init() {
     bool success = true;
 
     //Initialize SDL
-    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER) < 0) {
+    if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
         printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
         success = false;
     } else {
@@ -134,7 +134,7 @@ bool init() {
                     success = false;
                 }
                 //Check for joysticks
-                if (SDL_NumJoysticks() < 2) {
+                if (SDL_NumJoysticks() < 1) {
                     printf("Warning: No joysticks connected!\n");
                 } else {
                     printf("Number of joysticks connected: %d\n", SDL_NumJoysticks());

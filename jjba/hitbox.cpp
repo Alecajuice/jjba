@@ -14,7 +14,7 @@ Hitbox::Hitbox(double x, double y, double width, double height) : position({x, y
 Hitbox::Hitbox(Vector position, Vector size) : position(position), size(size) {}
 
 const SDL_Rect Hitbox::getSDL_Rect() const {
-    return {(int) position.x, (int) position.y, (int) size.x, (int) size.y};
+    return {(int) std::round(position.x), (int) std::round(position.y), (int) std::round(size.x), (int) std::round(size.y)};
 }
 
 Hitbox Hitbox::translate(double x, double y) {

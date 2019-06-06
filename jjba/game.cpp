@@ -27,10 +27,8 @@ bool Game::update(const double deltaTime, SDL_GameController *gameController) {
     }
 
 //Player updates
-    player.
-            readInput(gameController);
-    player.
-            update(deltaTime);
+    player.readInput(deltaTime, gameController);
+    player.update(deltaTime);
 
 //Collision checks
     collisionChecks();

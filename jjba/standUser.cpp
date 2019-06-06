@@ -34,6 +34,7 @@ void StandUser::render(SDL_Renderer *renderer) {
         SDL_RenderDrawRect(renderer, &rect);
     }
 
+    printf("B: my: %lf\nstand: %d\n", mPosition.y, boundingHitbox.getSDL_Rect().y);
     //Draw sprite
     mSprites.render(renderer, boundingHitbox.getSDL_Rect(), mStandState, mStandAnimationStartTime, mStandFlipType);
 
@@ -47,7 +48,7 @@ void StandUser::handleEvent(SDL_Event e) {
     //Keyboard events
     if (e.type == SDL_KEYDOWN) {
         switch (e.key.keysym.sym) {
-            case SDLK_SPACE:
+            case KEY_ATTACK:
                 setStandState("STAND_ATTACK");
                 break;
             default:
@@ -55,11 +56,11 @@ void StandUser::handleEvent(SDL_Event e) {
         }
     }
     //If joysticks are connected
-    if (SDL_NumJoysticks() > 1) {
+    if (SDL_NumJoysticks() > 0) {
         //Button events
         if (e.type == SDL_CONTROLLERBUTTONDOWN) {
             //Motion on controller 1
-            if (e.cbutton.which == 1) {
+            if (e.cbutton.which == 0) {
                 if (e.cbutton.button == SDL_CONTROLLER_BUTTON_RIGHTSHOULDER) {
                     setStandState("STAND_ATTACK");
                 }
@@ -69,8 +70,8 @@ void StandUser::handleEvent(SDL_Event e) {
 
 }
 
-void StandUser::readInput(SDL_GameController *gameController) {
-    Character::readInput(gameController);
+void StandUser::readInput(double deltaTime, SDL_GameController *gameController) {
+    Character::readInput(deltaTime, gameController);
 
     double xVelocity = mVelocity.x;
     double yVelocity = mVelocity.y;
@@ -78,29 +79,29 @@ void StandUser::readInput(SDL_GameController *gameController) {
     //Keyboard input
     const Uint8 *currentKeyStates = SDL_GetKeyboardState(nullptr);
     //X movement
-    if (currentKeyStates[SDL_SCANCODE_J] && !currentKeyStates[SDL_SCANCODE_L]) {
+    if (currentKeyStates[SC_MOVESTAND_LEFT] && !currentKeyStates[SC_MOVESTAND_RIGHT]) {
         xVelocity = -(double) getStandMoveSpeed();
         if (mStandState == "STAND_IDLE")
             mStandFlipType = SDL_FLIP_HORIZONTAL;
-    } else if (!currentKeyStates[SDL_SCANCODE_J] && currentKeyStates[SDL_SCANCODE_L]) {
+    } else if (!currentKeyStates[SC_MOVESTAND_LEFT] && currentKeyStates[SC_MOVESTAND_RIGHT]) {
         xVelocity = (double) getStandMoveSpeed();
         if (mStandState == "STAND_IDLE")
             mStandFlipType = SDL_FLIP_NONE;
     }
     //Y movement
-    if (currentKeyStates[SDL_SCANCODE_I] && !currentKeyStates[SDL_SCANCODE_K]) {
+    if (currentKeyStates[SC_MOVESTAND_UP] && !currentKeyStates[SC_MOVESTAND_DOWN]) {
         yVelocity = -(double) getStandMoveSpeed();
-    } else if (!currentKeyStates[SDL_SCANCODE_I] && currentKeyStates[SDL_SCANCODE_K]) {
+    } else if (!currentKeyStates[SC_MOVESTAND_UP] && currentKeyStates[SC_MOVESTAND_DOWN]) {
         yVelocity = (double) getStandMoveSpeed();
     }
 
     //Controller input
-    if (SDL_NumJoysticks() > 1) {
+    if (SDL_NumJoysticks() > 0) {
         Sint16 x = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_RIGHTX);
         Sint16 y = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_RIGHTY);
         //X movement
         if (std::abs(x) > JOYSTICK_DEAD_ZONE) {
-            if (!currentKeyStates[SDL_SCANCODE_J] && !currentKeyStates[SDL_SCANCODE_L]) {
+            if (!currentKeyStates[SC_MOVESTAND_LEFT] && !currentKeyStates[SC_MOVESTAND_RIGHT]) {
                 xVelocity += (double) (x * (getStandMoveSpeed() - (x / std::abs(x)) * mVelocity.x)) / JOYSTICK_SCALER;
                 //Flip stand
                 if (mStandState == "STAND_IDLE") {
@@ -114,7 +115,7 @@ void StandUser::readInput(SDL_GameController *gameController) {
         }
         //Y movement
         if (std::abs(y) > JOYSTICK_DEAD_ZONE) {
-            if (!currentKeyStates[SDL_SCANCODE_I] && !currentKeyStates[SDL_SCANCODE_K]) {
+            if (!currentKeyStates[SC_MOVESTAND_UP] && !currentKeyStates[SC_MOVESTAND_DOWN]) {
                 yVelocity += (double) (y * (getStandMoveSpeed() - (y / std::abs(y)) * mVelocity.y)) / JOYSTICK_SCALER;
             }
         }
@@ -148,6 +149,21 @@ void StandUser::update(double deltaTime) {
 
 Vector StandUser::staticCollisionCheck(Object other) {
     Vector response = Character::staticCollisionCheck(other);
+    double x, y;
+    if (response.x < 0) {
+        x = fmin(mStand.getMVelocity().x, 0);
+    } else if (response.x > 0) {
+        x = fmax(mStand.getMVelocity().x, 0.0f);
+    }
+    if (response.y < 0) {
+        y = fmin(mStand.getMVelocity().y, 0);
+    } else if (response.y > 0) {
+        y = fmax(mStand.getMVelocity().y, 0.0f);
+    }
+    mStand.setMVelocity({x, y});
+    mStand.setMPosition({mStand.getMPosition().x + response.x, mStand.getMPosition().y + response.y});
+    //mStand.setMVelocity({mStand.getMVelocity().x + response.x, mStand.getMVelocity().y + response.y});
+
     mStand.staticCollisionCheck(other);
     //Keep stand within range
     double dx = mStand.getMPosition().x - getMPosition().x;
