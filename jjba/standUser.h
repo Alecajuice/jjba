@@ -35,6 +35,8 @@ public:
 
     void readInput(SDL_GameController *gameController) override;
 
+    Vector staticCollisionCheck(Object other) override; //Returns collision response vector
+
     //Getters and setters
     virtual const int getStandMoveSpeed() const = 0;
 

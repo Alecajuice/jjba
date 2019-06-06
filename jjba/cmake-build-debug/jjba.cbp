@@ -117,6 +117,12 @@
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/jotaro.h">
 			<Option target="jjba"/>
 		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/level.cpp">
+			<Option target="jjba"/>
+		</Unit>
+		<Unit filename="C:/Users/aleca/git/jjba/jjba/level.h">
+			<Option target="jjba"/>
+		</Unit>
 		<Unit filename="C:/Users/aleca/git/jjba/jjba/main.cpp">
 			<Option target="jjba"/>
 		</Unit>

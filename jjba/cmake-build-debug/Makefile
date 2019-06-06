@@ -257,6 +257,33 @@ jotaro.cpp.s:
 	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/jotaro.cpp.s
 .PHONY : jotaro.cpp.s
 
+level.obj: level.cpp.obj
+
+.PHONY : level.obj
+
+# target to build an object file
+level.cpp.obj:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/level.cpp.obj
+.PHONY : level.cpp.obj
+
+level.i: level.cpp.i
+
+.PHONY : level.i
+
+# target to preprocess a source file
+level.cpp.i:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/level.cpp.i
+.PHONY : level.cpp.i
+
+level.s: level.cpp.s
+
+.PHONY : level.s
+
+# target to generate assembly for a file
+level.cpp.s:
+	$(MAKE) -f CMakeFiles\jjba.dir\build.make CMakeFiles/jjba.dir/level.cpp.s
+.PHONY : level.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -389,6 +416,9 @@ help:
 	@echo ... jotaro.obj
 	@echo ... jotaro.i
 	@echo ... jotaro.s
+	@echo ... level.obj
+	@echo ... level.i
+	@echo ... level.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

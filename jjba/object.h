@@ -11,8 +11,8 @@
 class Object {
 protected:
     Vector mPosition; //Position of center of motion
+    Vector mPrevPosition; //Position last frame
     Vector mVelocity; //Velocity in pixels/second
-//    Hitbox mHitboxes[];
     std::vector<Hitbox> mHitboxes;
 public:
     //Constructors
@@ -26,6 +26,8 @@ public:
     virtual void update(double deltaTime);
 
     void setPosition(double x, double y);
+
+    virtual Vector staticCollisionCheck(Object other); //Returns collision response vector
 
     //Getters and setters
     std::vector<Hitbox> getMHitboxes() const;

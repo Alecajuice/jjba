@@ -42,6 +42,7 @@ CMakeFiles/jjba.dir/game.cpp.obj: ../game.cpp
 CMakeFiles/jjba.dir/game.cpp.obj: ../game.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../hitbox.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../jotaro.h
+CMakeFiles/jjba.dir/game.cpp.obj: ../level.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../object.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../spritesheet.h
 CMakeFiles/jjba.dir/game.cpp.obj: ../standUser.h
@@ -83,6 +84,26 @@ CMakeFiles/jjba.dir/jotaro.cpp.obj: ../jotaro.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: ../object.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: ../spritesheet.h
 CMakeFiles/jjba.dir/jotaro.cpp.obj: ../standUser.h
+
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_blendmode.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_config.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_endian.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_error.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_pixels.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_platform.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_rect.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_render.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_rwops.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_stdinc.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_surface.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/SDL_video.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/begin_code.h
+CMakeFiles/jjba.dir/level.cpp.obj: C:/MinGW/include/SDL2/close_code.h
+CMakeFiles/jjba.dir/level.cpp.obj: ../hitbox.h
+CMakeFiles/jjba.dir/level.cpp.obj: ../level.cpp
+CMakeFiles/jjba.dir/level.cpp.obj: ../level.h
+CMakeFiles/jjba.dir/level.cpp.obj: ../object.h
+CMakeFiles/jjba.dir/level.cpp.obj: ../spritesheet.h
 
 CMakeFiles/jjba.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL.h
 CMakeFiles/jjba.dir/main.cpp.obj: C:/MinGW/include/SDL2/SDL_assert.h
@@ -136,6 +157,7 @@ CMakeFiles/jjba.dir/main.cpp.obj: ../game.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../gameName.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../hitbox.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../jotaro.h
+CMakeFiles/jjba.dir/main.cpp.obj: ../level.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/jjba.dir/main.cpp.obj: ../object.h
 CMakeFiles/jjba.dir/main.cpp.obj: ../spritesheet.h

@@ -185,6 +185,149 @@
       }
     ]
   },
+  "JUMPING": {
+    "length": 10,
+    "fps": 15,
+    "variable_width": true,
+    "default": {
+      "y": 1111,
+      "height": 151,
+      "x-offset": -29,
+      "y-offset": -28
+    },
+    "frames": [
+      {
+        "x": 2,
+        "width": 97,
+        "x-offset": -29
+      },
+      {
+        "x": 109,
+        "width": 57,
+        "x-offset": 0
+      },
+      {
+        "x": 183,
+        "width": 90,
+        "x-offset": -26
+      },
+      {
+        "x": 281,
+        "width": 88,
+        "x-offset": -27
+      },
+      {
+        "x": 383,
+        "width": 80,
+        "x-offset": -22
+      },
+      {
+        "x": 480,
+        "width": 85,
+        "x-offset": -29
+      },
+      {
+        "x": 576,
+        "width": 99,
+        "x-offset": -42
+      },
+      {
+        "x": 683,
+        "width": 100,
+        "x-offset": -40
+      },
+      {
+        "x": 793,
+        "width": 111,
+        "x-offset": -40
+      },
+      {
+        "x": 914,
+        "width": 125,
+        "x-offset": -37
+      }
+    ]
+  },
+  "FALLING": {
+    "length": 2,
+    "fps": 15,
+    "variable_width": true,
+    "default": {
+      "y": 1111,
+      "height": 151,
+      "x-offset": -29,
+      "y-offset": -28
+    },
+    "frames": [
+      {
+        "x": 1043,
+        "width": 104
+      },
+      {
+        "x": 1154,
+        "width": 102,
+        "x-offset": -27
+      }
+    ]
+  },
+  "ATTACK": {
+    "length": 10,
+    "fps": 15,
+    "variable_width": true,
+    "default": {
+      "y": 2103,
+      "height": 118,
+      "x-offset": -9,
+      "y-offset": -2
+    },
+    "frames": [
+      {
+        "x": 6,
+        "width": 88,
+        "x-offset": -15
+      },
+      {
+        "x": 102,
+        "width": 117,
+        "x-offset": -16
+      },
+      {
+        "x": 227,
+        "width": 119,
+        "x-offset": -16
+      },
+      {
+        "x": 359,
+        "width": 152
+      },
+      {
+        "x": 519,
+        "width": 110
+      },
+      {
+        "x": 637,
+        "width": 134
+      },
+      {
+        "x": 776,
+        "width": 132
+      },
+      {
+        "x": 915,
+        "width": 107
+      },
+      {
+        "x": 1031,
+        "width": 71,
+        "x-offset": -14
+      },
+      {
+        "x": 1110,
+        "width": 76,
+        "x-offset": -17
+      }
+    ]
+  },
   "STAND_IDLE": {
     "length": 6,
     "fps": 8,

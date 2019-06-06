@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/jjba.dir/standUser.cpp.obj"
   "CMakeFiles/jjba.dir/jotaro.cpp.obj"
   "CMakeFiles/jjba.dir/spritesheet.cpp.obj"
+  "CMakeFiles/jjba.dir/level.cpp.obj"
   "jjba.pdb"
   "jjba.exe"
   "jjba.exe.manifest"

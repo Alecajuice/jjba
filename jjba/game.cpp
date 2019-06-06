@@ -5,11 +5,13 @@
 #include "game.h"
 
 
-Game::Game(SDL_Renderer *renderer) : player() {
+Game::Game(SDL_Renderer *renderer) : player(), level({Hitbox(400, 400, 500, 50),
+                                                      Hitbox(900, 200, 50, 250),
+                                                      Hitbox(0, 600, 1500, 50)}) {
     player.loadMedia(renderer);
 }
 
-bool Game::update(const double deltaTime, SDL_GameController* gameController) {
+bool Game::update(const double deltaTime, SDL_GameController *gameController) {
     //Event handler
     SDL_Event e;
 
@@ -24,15 +26,24 @@ bool Game::update(const double deltaTime, SDL_GameController* gameController) {
         }
     }
 
-    player.readInput(gameController);
-    player.update(deltaTime);
+//Player updates
+    player.
+            readInput(gameController);
+    player.
+            update(deltaTime);
 
-    //Don't quit
+//Collision checks
+    collisionChecks();
+
+//Don't quit
     return false;
 }
 
 void Game::render(SDL_Renderer *renderer) {
+    level.render(renderer);
     player.render(renderer);
 }
 
-
+void Game::collisionChecks() {
+    player.staticCollisionCheck(level);
+}

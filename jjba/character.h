@@ -21,15 +21,21 @@ public:
     Character(double x, double y, std::vector<Hitbox> mHitbox);
 
     //Member functions
+    void update(double deltaTime) override;
+
     virtual void handleEvent(SDL_Event e);
 
-    virtual void readInput(SDL_GameController* gameController);
+    virtual void readInput(SDL_GameController *gameController);
 
-    virtual void render(SDL_Renderer* renderer);
+    virtual void render(SDL_Renderer *renderer);
+
+    Vector staticCollisionCheck(Object other) override; //Returns collision response vector
+
     virtual const int getMoveSpeed() const = 0;
 
     //Getters and setters
     const std::string &getState() const;
+
     void setState(const std::string &state);
 };
 

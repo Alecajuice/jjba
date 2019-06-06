@@ -65,4 +65,8 @@ public:
 
 Hitbox getBoundingHitbox(std::vector<Hitbox> hitboxes);
 
+bool oneDimOverlap(double x1, double w1, double x2, double w2);
+
+bool checkCollision(Hitbox h1, Hitbox h2, Vector* overlap);
+
 #endif //JJBA_HITBOX_H

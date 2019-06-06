@@ -6,10 +6,12 @@
 #define JJBA_GAME_H
 
 #include "jotaro.h"
+#include "level.h"
 
 class Game {
 private:
     Jotaro player;
+    Level level;
 public:
     //Constructor
     Game(SDL_Renderer* renderer);
@@ -19,6 +21,9 @@ public:
 
     //Render
     void render(SDL_Renderer* renderer);
+
+    //Collision checks
+    void collisionChecks();
 };
 
 #endif //JJBA_GAME_H
